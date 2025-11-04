@@ -255,6 +255,193 @@
         "deleteAccount": "Delete Account"
       }
     }
+  },
+  "guestLimit": {
+    "freeTrialAvailable": "Free Trial Available",
+    "limitExceeded": "Limit Exceeded",
+    "limitExceededMessage": "You have already used your free generation. Please sign in to continue.",
+    "remainingAttempts": "{count} free generation remaining",
+    "signInButton": "Sign In",
+    "formHint": "Free trial: 1 generation remaining",
+    "modal": {
+      "title": "Free Quota Used",
+      "message": "You've used your free video generation. Create an account to get more generations!",
+      "benefitsTitle": "When you sign up, you'll get:",
+      "benefit1": "Unlimited video generations",
+      "benefit2": "Save and manage your videos",
+      "benefit3": "Access to advanced features and settings",
+      "signUpButton": "Sign Up",
+      "cancelButton": "Maybe Later",
+      "hasAccount": "Already have an account?",
+      "signInLink": "Sign In"
+    }
+  },
+  "pricing": {
+    "meta": {
+      "title": "Pricing Plans - AI Video Generator",
+      "description": "Choose the perfect plan for your video creation needs. Flexible pricing with monthly and yearly options.",
+      "keywords": "pricing, plans, subscription, video generation, AI video"
+    },
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Choose the plan that's right for you",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "save": "Save {percent}%",
+    "popular": "Most Popular",
+    "perMonth": "month",
+    "perYear": "year",
+    "billedAnnually": "Billed annually as {amount}",
+    "features": {
+      "noCard": "No credit card required",
+      "cancelAnytime": "Cancel anytime",
+      "moneyBack": "30-day money back guarantee"
+    },
+    "plans": {
+      "free": {
+        "name": "Free",
+        "description": "Perfect for trying out",
+        "cta": "Get Started",
+        "features": {
+          "credits": "10 credits per month",
+          "speed": "Standard generation speed",
+          "resolution": "Up to 720p resolution",
+          "support": "Basic support",
+          "watermark": "Watermark removal (extra cost)"
+        }
+      },
+      "basic": {
+        "name": "Basic",
+        "description": "For individual creators",
+        "cta": "Start Free Trial",
+        "features": {
+          "credits": "100 credits per month",
+          "speed": "Fast generation",
+          "resolution": "Up to 1080p resolution",
+          "watermark": "No watermark",
+          "support": "Email support"
+        }
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "For professionals",
+        "cta": "Start Free Trial",
+        "features": {
+          "credits": "500 credits per month",
+          "speed": "Priority generation",
+          "resolution": "Up to 4K resolution",
+          "watermark": "No watermark",
+          "advanced": "Advanced features",
+          "support": "Priority support"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "For large teams",
+        "cta": "Contact Sales",
+        "customPrice": "Custom Pricing",
+        "features": {
+          "credits": "Unlimited credits",
+          "server": "Dedicated server",
+          "api": "API access",
+          "custom": "Custom features",
+          "support": "24/7 dedicated support"
+        }
+      }
+    },
+    "creditPackages": {
+      "title": "Need More Credits?",
+      "subtitle": "Purchase additional credits anytime",
+      "credits": "Credits",
+      "save": "Save {percent}%",
+      "bestValue": "Best Value",
+      "buyNow": "Buy Now",
+      "noExpiry": "Credits never expire",
+      "note": "All credit packages include priority processing and no watermarks"
+    },
+    "comparison": {
+      "title": "Compare All Features",
+      "subtitle": "Find the perfect plan for your needs",
+      "feature": "Feature",
+      "plans": {
+        "free": "Free",
+        "basic": "Basic",
+        "pro": "Pro",
+        "enterprise": "Enterprise"
+      },
+      "popular": "Popular",
+      "unlimited": "Unlimited",
+      "standard": "Standard",
+      "fast": "Fast",
+      "priority": "Priority",
+      "dedicated": "Dedicated",
+      "categories": {
+        "basic": "Basic Features",
+        "features": "Advanced Features",
+        "support": "Support"
+      },
+      "features": {
+        "monthlyCredits": "Monthly Credits",
+        "speed": "Generation Speed",
+        "resolution": "Max Resolution",
+        "watermark": "Watermark",
+        "batchGeneration": "Batch Generation",
+        "advancedFeatures": "Advanced Features",
+        "apiAccess": "API Access",
+        "customBranding": "Custom Branding",
+        "emailSupport": "Email Support",
+        "prioritySupport": "Priority Support",
+        "dedicatedSupport": "24/7 Dedicated Support"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our pricing",
+      "q1": {
+        "question": "What are credits and how do they work?",
+        "answer": "Credits are used to generate videos. Each video generation consumes credits based on length and quality. For example, a 5-second video at 1080p uses approximately 5 credits."
+      },
+      "q2": {
+        "question": "Do credits expire?",
+        "answer": "Subscription credits reset monthly. Purchased credit packages never expire and roll over indefinitely."
+      },
+      "q3": {
+        "question": "Can I cancel my subscription anytime?",
+        "answer": "Yes, you can cancel anytime from your account settings. You'll continue to have access until the end of your billing period."
+      },
+      "q4": {
+        "question": "What payment methods do you accept?",
+        "answer": "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers for enterprise plans."
+      },
+      "q5": {
+        "question": "How is the Enterprise plan priced?",
+        "answer": "Enterprise pricing is customized based on your specific needs, including expected usage, custom features, and support requirements. Contact our sales team for a quote."
+      },
+      "q6": {
+        "question": "Do unused credits accumulate?",
+        "answer": "Monthly subscription credits do not roll over. However, purchased credit packages never expire and accumulate with your balance."
+      },
+      "q7": {
+        "question": "Can I upgrade or downgrade my plan?",
+        "answer": "Yes, you can change your plan at any time. Upgrades take effect immediately, while downgrades take effect at the start of your next billing period."
+      },
+      "q8": {
+        "question": "Is there a refund policy?",
+        "answer": "We offer a 30-day money-back guarantee for first-time subscribers. If you're not satisfied, contact us for a full refund within 30 days of purchase."
+      },
+      "stillHaveQuestions": "Still have questions?",
+      "contactSupport": "Contact Support"
+    },
+    "cta": {
+      "title": "Ready to Start Creating?",
+      "subtitle": "Join thousands of creators using AI to transform their ideas into stunning videos",
+      "getStarted": "Get Started for Free",
+      "contactSales": "Contact Sales",
+      "trust": {
+        "noCredit": "No credit card required",
+        "instantSetup": "Instant setup",
+        "moneyBack": "30-day money back"
+      }
+    }
   }
 }
 

@@ -255,6 +255,193 @@
         "deleteAccount": "アカウント削除"
       }
     }
+  },
+  "guestLimit": {
+    "freeTrialAvailable": "無料トライアル利用可能",
+    "limitExceeded": "制限に達しました",
+    "limitExceededMessage": "無料生成を使用済みです。続けるにはサインインしてください。",
+    "remainingAttempts": "残り{count}回の無料生成",
+    "signInButton": "サインイン",
+    "formHint": "無料トライアル：残り1回",
+    "modal": {
+      "title": "無料枠を使い切りました",
+      "message": "無料の動画生成を使用しました。アカウントを作成してさらに生成できます！",
+      "benefitsTitle": "サインアップすると：",
+      "benefit1": "無制限の動画生成",
+      "benefit2": "動画の保存と管理",
+      "benefit3": "高度な機能と設定へのアクセス",
+      "signUpButton": "サインアップ",
+      "cancelButton": "後で",
+      "hasAccount": "すでにアカウントをお持ちですか？",
+      "signInLink": "サインイン"
+    }
+  },
+  "pricing": {
+    "meta": {
+      "title": "料金プラン - AI動画ジェネレーター",
+      "description": "動画制作のニーズに最適なプランをお選びください。月額および年額の柔軟なオプション。",
+      "keywords": "料金, プラン, サブスクリプション, 動画生成, AI動画"
+    },
+    "title": "シンプルで透明な料金体系",
+    "subtitle": "あなたに合ったプランを選択",
+    "monthly": "月払い",
+    "yearly": "年払い",
+    "save": "{percent}%お得",
+    "popular": "人気",
+    "perMonth": "月",
+    "perYear": "年",
+    "billedAnnually": "年間{amount}として請求",
+    "features": {
+      "noCard": "クレジットカード不要",
+      "cancelAnytime": "いつでもキャンセル可能",
+      "moneyBack": "30日間返金保証"
+    },
+    "plans": {
+      "free": {
+        "name": "無料",
+        "description": "お試しに最適",
+        "cta": "始める",
+        "features": {
+          "credits": "月間10クレジット",
+          "speed": "標準生成速度",
+          "resolution": "最大720p解像度",
+          "support": "基本サポート",
+          "watermark": "透かし除去（追加料金）"
+        }
+      },
+      "basic": {
+        "name": "ベーシック",
+        "description": "個人クリエイター向け",
+        "cta": "無料トライアル開始",
+        "features": {
+          "credits": "月間100クレジット",
+          "speed": "高速生成",
+          "resolution": "最大1080p解像度",
+          "watermark": "透かしなし",
+          "support": "メールサポート"
+        }
+      },
+      "pro": {
+        "name": "プロ",
+        "description": "プロフェッショナル向け",
+        "cta": "無料トライアル開始",
+        "features": {
+          "credits": "月間500クレジット",
+          "speed": "優先生成",
+          "resolution": "最大4K解像度",
+          "watermark": "透かしなし",
+          "advanced": "高度な機能",
+          "support": "優先サポート"
+        }
+      },
+      "enterprise": {
+        "name": "エンタープライズ",
+        "description": "大規模チーム向け",
+        "cta": "営業に問い合わせ",
+        "customPrice": "カスタム価格",
+        "features": {
+          "credits": "無制限クレジット",
+          "server": "専用サーバー",
+          "api": "APIアクセス",
+          "custom": "カスタム機能",
+          "support": "24/7専任サポート"
+        }
+      }
+    },
+    "creditPackages": {
+      "title": "さらにクレジットが必要ですか？",
+      "subtitle": "いつでも追加クレジットを購入",
+      "credits": "クレジット",
+      "save": "{percent}%お得",
+      "bestValue": "最もお得",
+      "buyNow": "今すぐ購入",
+      "noExpiry": "クレジットは無期限",
+      "note": "すべてのクレジットパッケージには優先処理と透かしなしが含まれます"
+    },
+    "comparison": {
+      "title": "全機能を比較",
+      "subtitle": "ニーズに最適なプランを見つける",
+      "feature": "機能",
+      "plans": {
+        "free": "無料",
+        "basic": "ベーシック",
+        "pro": "プロ",
+        "enterprise": "エンタープライズ"
+      },
+      "popular": "人気",
+      "unlimited": "無制限",
+      "standard": "標準",
+      "fast": "高速",
+      "priority": "優先",
+      "dedicated": "専用",
+      "categories": {
+        "basic": "基本機能",
+        "features": "高度な機能",
+        "support": "サポート"
+      },
+      "features": {
+        "monthlyCredits": "月間クレジット",
+        "speed": "生成速度",
+        "resolution": "最大解像度",
+        "watermark": "透かし",
+        "batchGeneration": "一括生成",
+        "advancedFeatures": "高度な機能",
+        "apiAccess": "APIアクセス",
+        "customBranding": "カスタムブランディング",
+        "emailSupport": "メールサポート",
+        "prioritySupport": "優先サポート",
+        "dedicatedSupport": "24/7専任サポート"
+      }
+    },
+    "faq": {
+      "title": "よくある質問",
+      "subtitle": "料金について知っておくべきこと",
+      "q1": {
+        "question": "クレジットとは何ですか？どのように機能しますか？",
+        "answer": "クレジットは動画生成に使用されます。各動画生成は長さと品質に基づいてクレジットを消費します。例えば、1080pで5秒の動画は約5クレジットを使用します。"
+      },
+      "q2": {
+        "question": "クレジットは期限切れになりますか？",
+        "answer": "サブスクリプションクレジットは月ごとにリセットされます。購入したクレジットパッケージは期限切れにならず、無期限に繰り越されます。"
+      },
+      "q3": {
+        "question": "いつでもサブスクリプションをキャンセルできますか？",
+        "answer": "はい、アカウント設定からいつでもキャンセルできます。請求期間の終了まではアクセスが継続されます。"
+      },
+      "q4": {
+        "question": "どの支払い方法が利用できますか？",
+        "answer": "主要なクレジットカード（Visa、MasterCard、American Express）、PayPal、エンタープライズプランでは銀行振込を受け付けています。"
+      },
+      "q5": {
+        "question": "エンタープライズプランの価格はどのように決まりますか？",
+        "answer": "エンタープライズ価格は、予想される使用量、カスタム機能、サポート要件など、お客様の特定のニーズに基づいてカスタマイズされます。見積もりについては営業チームにお問い合わせください。"
+      },
+      "q6": {
+        "question": "未使用のクレジットは蓄積されますか？",
+        "answer": "月間サブスクリプションクレジットは繰り越されません。ただし、購入したクレジットパッケージは期限切れにならず、残高に蓄積されます。"
+      },
+      "q7": {
+        "question": "プランをアップグレードまたはダウングレードできますか？",
+        "answer": "はい、いつでもプランを変更できます。アップグレードは即座に有効になり、ダウングレードは次の請求期間の開始時に有効になります。"
+      },
+      "q8": {
+        "question": "返金ポリシーはありますか？",
+        "answer": "初回サブスクライバーには30日間の返金保証を提供しています。ご満足いただけない場合は、購入後30日以内にお問い合わせいただければ全額返金いたします。"
+      },
+      "stillHaveQuestions": "まだ質問がありますか？",
+      "contactSupport": "サポートに連絡"
+    },
+    "cta": {
+      "title": "制作を始める準備はできましたか？",
+      "subtitle": "数千人のクリエイターと一緒にAIでアイデアを素晴らしい動画に変えましょう",
+      "getStarted": "無料で始める",
+      "contactSales": "営業に問い合わせ",
+      "trust": {
+        "noCredit": "クレジットカード不要",
+        "instantSetup": "即座にセットアップ",
+        "moneyBack": "30日間返金保証"
+      }
+    }
   }
 }
 

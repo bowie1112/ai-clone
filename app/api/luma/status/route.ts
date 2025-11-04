@@ -1,6 +1,11 @@
 import { NextResponse } from 'next/server';
 
+const USE_MOCK = process.env.LUMA_USE_MOCK === '1' || process.env.NEXT_PUBLIC_USE_MOCK === '1';
+
 export async function GET(request: Request) {
+  if (USE_MOCK) {
+    return NextResponse.json({ status: { successFlag: 1, response: { resultUrls: ['/videos/mock.mp4'] } } });
+  }
   try {
     const apiKey = process.env.LUMA_API_KEY;
     if (!apiKey) {

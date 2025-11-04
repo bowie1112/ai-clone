@@ -2,6 +2,9 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { authClient } from '@/lib/auth-client';
+import { checkGuestLimit } from '@/lib/guest-limit/client-check';
+import { getClientIdentity } from '@/lib/guest-limit/fingerprint';
+import { GuestLimitModal } from '@/components/GuestLimitModal';
 
 export default function VideoGenerator() {
   const [activeTab, setActiveTab] = useState<'text' | 'image'>('text');
@@ -13,6 +16,7 @@ export default function VideoGenerator() {
   const [statusText, setStatusText] = useState('');
   const [resultUrls, setResultUrls] = useState<string[] | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [showLimitModal, setShowLimitModal] = useState(false);
   const pollTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { data: session } = authClient.useSession();
   const googleEnabled = process.env.NEXT_PUBLIC_GOOGLE_LOGIN_ENABLED === '1';
@@ -42,6 +46,15 @@ export default function VideoGenerator() {
         const urls: string[] = s?.response?.resultUrls || [];
         setResultUrls(urls.length ? urls : null);
         setIsGenerating(false);
+        // 游客成功生成后，在客户端记录使用（本地 & 服务器）
+        if (!session?.user && id) {
+          try {
+            const { recordGuestUsage } = await import('@/lib/guest-limit/client-check');
+            await recordGuestUsage(id);
+          } catch (e) {
+            console.error('记录游客使用失败:', e);
+          }
+        }
         return;
       }
       const msg = s?.errorMessage || '生成失败';
@@ -84,17 +97,29 @@ export default function VideoGenerator() {
 
   const handleGenerate = async () => {
     try {
-      if (!session?.user) {
-        setError('请先登录后再生成视频');
-        return;
-      }
       setError(null);
       setResultUrls(null);
+      
+      // 如果未登录，检查游客限制
+      if (!session?.user) {
+        const checkResult = await checkGuestLimit();
+        if (!checkResult.allowed) {
+          setShowLimitModal(true);
+          return;
+        }
+      }
+      
       setIsGenerating(true);
       setStatusText('创建任务中...');
 
       if (!videoUrl.trim()) {
         throw new Error('请输入可访问的视频 URL（用于修改）');
+      }
+      
+      // 获取客户端识别信息（游客需要）
+      let identity = null;
+      if (!session?.user) {
+        identity = await getClientIdentity();
       }
 
       // 调用 Luma API 创建任务
@@ -112,7 +137,7 @@ export default function VideoGenerator() {
       // 保存到数据库
       try {
         const locale = typeof window !== 'undefined' ? window.location.pathname.split('/')[1] : 'en';
-        await fetch('/api/videos', {
+        const videoResponse = await fetch('/api/videos', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -122,8 +147,18 @@ export default function VideoGenerator() {
             locale,
             lumaId: id,
             userId: session?.user?.id,
+            ...(identity || {}), // 游客时附加 fingerprint 和 userAgent
           }),
         });
+        
+        const videoData = await videoResponse.json();
+        
+        // 处理游客限制错误
+        if (!videoResponse.ok && videoData.code === 'GUEST_LIMIT_EXCEEDED') {
+          setShowLimitModal(true);
+          setIsGenerating(false);
+          return;
+        }
       } catch (dbError) {
         console.error('保存到数据库失败:', dbError);
         // 不阻塞主流程
@@ -274,41 +309,56 @@ export default function VideoGenerator() {
             <p className="text-sm text-gray-500 mt-2">请输入一个公网可访问的视频链接</p>
           </div>
 
-          {/* Generate Button / Login CTA */}
-          {session?.user ? (
+          {/* Generate Button - 对所有用户可用 */}
+          <div className="space-y-3">
+            {!session?.user && (
+              <div className="flex items-center justify-center gap-2 text-sm text-amber-600 bg-amber-50 px-4 py-2 rounded-lg">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                </svg>
+                <span>免费试用：未登录用户可免费生成 1 次视频</span>
+              </div>
+            )}
+            
             <button
               onClick={handleGenerate}
               disabled={!prompt.trim() || !videoUrl.trim() || isGenerating}
-              className="w-full bg-gray-900 text-white py-4 rounded-full font-semibold text-lg hover:bg-gray-800 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-lg hover:shadow-xl"
+              className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-4 rounded-full font-semibold text-lg hover:from-purple-700 hover:via-blue-700 hover:to-indigo-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zM8 14a5 5 0 00-5 5v3h14v-3a5 5 0 00-5-5H8z"
+                  d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
                 />
-                <rect x="2" y="2" width="20" height="20" rx="2" ry="2" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
               </svg>
-              {isGenerating ? 'Generating...' : 'Generate Luma Modify Video'}
+              {isGenerating ? '生成中...' : session?.user ? '生成视频' : '免费生成视频'}
             </button>
-          ) : (
-            <div className="flex flex-col items-center gap-3">
-              <p className="text-sm text-gray-600">请先登录后再生成视频</p>
+            
+            {!session?.user && googleEnabled && (
               <button
                 onClick={async () => {
-                  if (googleEnabled) {
-                    await authClient.signIn.social({ provider: 'google', callbackURL: typeof window !== 'undefined' ? window.location.href : '/' });
-                  }
+                  await authClient.signIn.social({ provider: 'google', callbackURL: typeof window !== 'undefined' ? window.location.href : '/' });
                 }}
-                disabled={!googleEnabled}
-                className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-full font-semibold hover:shadow-lg transition-all disabled:opacity-50"
-                title={googleEnabled ? '使用 Google 登录' : '未启用第三方登录'}
+                className="w-full bg-white text-gray-700 py-3 rounded-full font-medium hover:bg-gray-50 transition-all border border-gray-300 flex items-center justify-center gap-2"
               >
-                使用账号登录
+                <svg className="w-5 h-5" viewBox="0 0 24 24">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
+                登录获取更多次数
               </button>
-            </div>
-          )}
+            )}
+          </div>
 
           {statusText && (
             <p className="mt-4 text-sm text-gray-600">{statusText}</p>
@@ -319,6 +369,12 @@ export default function VideoGenerator() {
 
           {/* 隐藏 taskId 与手动查询入口，保持极简体验 */}
         </div>
+        
+        {/* 游客限制弹窗 */}
+        <GuestLimitModal
+          isOpen={showLimitModal}
+          onClose={() => setShowLimitModal(false)}
+        />
 
         {/* 仅在生成完成后展示预览与链接 */}
         {resultUrls && resultUrls.length > 0 && (

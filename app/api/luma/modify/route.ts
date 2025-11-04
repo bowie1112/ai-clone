@@ -1,13 +1,20 @@
 import { NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
 
+// Mock flag: set LUMA_USE_MOCK=1 (server) or NEXT_PUBLIC_USE_MOCK=1 (client) to enable
+const USE_MOCK = process.env.LUMA_USE_MOCK === '1' || process.env.NEXT_PUBLIC_USE_MOCK === '1';
+
 export async function POST(request: Request) {
+  // -------- Mock branch --------
+  if (USE_MOCK) {
+    // 简单生成一个临时 taskId，前端将立即得到“已完成”状态
+    const mockTaskId = `mock-task-${Date.now()}`;
+    return NextResponse.json({ taskId: mockTaskId });
+  }
+  // -------- Real branch --------
   try {
-    // 登录校验：未登录不允许创建生成任务
+    // 若存在已登录会话可获得 userId，但不再强制要求登录
     const session = await auth.api.getSession({ headers: (request as any).headers ?? new Headers() });
-    if (!session?.user?.id) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
 
     const apiKey = process.env.LUMA_API_KEY;
     if (!apiKey) {

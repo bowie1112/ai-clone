@@ -255,6 +255,193 @@
         "deleteAccount": "删除账户"
       }
     }
+  },
+  "guestLimit": {
+    "freeTrialAvailable": "免费试用可用",
+    "limitExceeded": "已达使用上限",
+    "limitExceededMessage": "您已经使用了免费生成额度。请登录以继续使用。",
+    "remainingAttempts": "剩余 {count} 次免费生成机会",
+    "signInButton": "登录",
+    "formHint": "免登录试用：剩余 1 次",
+    "modal": {
+      "title": "免费额度已用完",
+      "message": "您已经使用了免费的视频生成额度。创建账户即可获得更多生成次数！",
+      "benefitsTitle": "注册后您将获得：",
+      "benefit1": "无限制视频生成",
+      "benefit2": "保存和管理您的视频",
+      "benefit3": "访问高级功能和设置",
+      "signUpButton": "注册账户",
+      "cancelButton": "稍后再说",
+      "hasAccount": "已有账户？",
+      "signInLink": "立即登录"
+    }
+  },
+  "pricing": {
+    "meta": {
+      "title": "定价方案 - AI 视频生成器",
+      "description": "选择适合您视频创作需求的完美方案。灵活的月付和年付选项。",
+      "keywords": "定价, 套餐, 订阅, 视频生成, AI 视频"
+    },
+    "title": "简单透明的定价",
+    "subtitle": "选择适合您的方案",
+    "monthly": "按月付费",
+    "yearly": "按年付费",
+    "save": "节省 {percent}%",
+    "popular": "最受欢迎",
+    "perMonth": "月",
+    "perYear": "年",
+    "billedAnnually": "年付总计 {amount}",
+    "features": {
+      "noCard": "无需信用卡",
+      "cancelAnytime": "随时取消",
+      "moneyBack": "30天退款保证"
+    },
+    "plans": {
+      "free": {
+        "name": "免费版",
+        "description": "适合试用体验",
+        "cta": "开始使用",
+        "features": {
+          "credits": "每月 10 积分",
+          "speed": "标准生成速度",
+          "resolution": "最高 720p 分辨率",
+          "support": "基础支持",
+          "watermark": "去除水印（需额外付费）"
+        }
+      },
+      "basic": {
+        "name": "基础版",
+        "description": "适合个人创作者",
+        "cta": "开始免费试用",
+        "features": {
+          "credits": "每月 100 积分",
+          "speed": "快速生成",
+          "resolution": "最高 1080p 分辨率",
+          "watermark": "无水印",
+          "support": "邮件支持"
+        }
+      },
+      "pro": {
+        "name": "专业版",
+        "description": "适合专业人士",
+        "cta": "开始免费试用",
+        "features": {
+          "credits": "每月 500 积分",
+          "speed": "优先生成",
+          "resolution": "最高 4K 分辨率",
+          "watermark": "无水印",
+          "advanced": "高级功能",
+          "support": "优先支持"
+        }
+      },
+      "enterprise": {
+        "name": "企业版",
+        "description": "适合大型团队",
+        "cta": "联系销售",
+        "customPrice": "定制价格",
+        "features": {
+          "credits": "无限积分",
+          "server": "专属服务器",
+          "api": "API 访问",
+          "custom": "定制功能",
+          "support": "24/7 专属支持"
+        }
+      }
+    },
+    "creditPackages": {
+      "title": "需要更多积分？",
+      "subtitle": "随时购买额外积分",
+      "credits": "积分",
+      "save": "节省 {percent}%",
+      "bestValue": "最超值",
+      "buyNow": "立即购买",
+      "noExpiry": "积分永不过期",
+      "note": "所有积分包均包含优先处理和无水印服务"
+    },
+    "comparison": {
+      "title": "对比所有功能",
+      "subtitle": "找到最适合您需求的方案",
+      "feature": "功能",
+      "plans": {
+        "free": "免费版",
+        "basic": "基础版",
+        "pro": "专业版",
+        "enterprise": "企业版"
+      },
+      "popular": "热门",
+      "unlimited": "无限",
+      "standard": "标准",
+      "fast": "快速",
+      "priority": "优先",
+      "dedicated": "专属",
+      "categories": {
+        "basic": "基础功能",
+        "features": "高级功能",
+        "support": "支持服务"
+      },
+      "features": {
+        "monthlyCredits": "每月积分",
+        "speed": "生成速度",
+        "resolution": "最高分辨率",
+        "watermark": "水印",
+        "batchGeneration": "批量生成",
+        "advancedFeatures": "高级功能",
+        "apiAccess": "API 访问",
+        "customBranding": "定制品牌",
+        "emailSupport": "邮件支持",
+        "prioritySupport": "优先支持",
+        "dedicatedSupport": "24/7 专属支持"
+      }
+    },
+    "faq": {
+      "title": "常见问题",
+      "subtitle": "关于定价您需要了解的一切",
+      "q1": {
+        "question": "什么是积分？如何使用？",
+        "answer": "积分用于生成视频。每次视频生成会根据时长和质量消耗积分。例如，一个 5 秒的 1080p 视频大约使用 5 个积分。"
+      },
+      "q2": {
+        "question": "积分会过期吗？",
+        "answer": "订阅积分每月重置。购买的积分包永不过期，可以无限期累积。"
+      },
+      "q3": {
+        "question": "可以随时取消订阅吗？",
+        "answer": "是的，您可以随时在账户设置中取消订阅。您将继续享有服务直到当前计费周期结束。"
+      },
+      "q4": {
+        "question": "支持哪些支付方式？",
+        "answer": "我们接受所有主流信用卡（Visa、MasterCard、美国运通）、PayPal，企业版还支持银行转账。"
+      },
+      "q5": {
+        "question": "企业版如何定价？",
+        "answer": "企业版定价根据您的具体需求定制，包括预期使用量、定制功能和支持要求。请联系我们的销售团队获取报价。"
+      },
+      "q6": {
+        "question": "未使用的积分会累积吗？",
+        "answer": "月度订阅积分不会累积。但是，购买的积分包永不过期，会累积到您的余额中。"
+      },
+      "q7": {
+        "question": "可以升级或降级套餐吗？",
+        "answer": "是的，您可以随时更改套餐。升级立即生效，降级在下一个计费周期开始时生效。"
+      },
+      "q8": {
+        "question": "有退款政策吗？",
+        "answer": "我们为首次订阅用户提供 30 天退款保证。如果您不满意，请在购买后 30 天内联系我们获得全额退款。"
+      },
+      "stillHaveQuestions": "还有其他问题？",
+      "contactSupport": "联系客服"
+    },
+    "cta": {
+      "title": "准备开始创作了吗？",
+      "subtitle": "加入数千名创作者，使用 AI 将创意转化为精彩视频",
+      "getStarted": "免费开始使用",
+      "contactSales": "联系销售",
+      "trust": {
+        "noCredit": "无需信用卡",
+        "instantSetup": "即时开通",
+        "moneyBack": "30 天退款保证"
+      }
+    }
   }
 }
 

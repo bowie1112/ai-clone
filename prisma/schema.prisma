@@ -78,3 +78,26 @@ enum VideoStatus {
   FAILED      // 失败
   CANCELLED   // 取消
 }
+
+// 游客使用记录表
+model GuestUsage {
+  id            String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+
+  // 追踪信息
+  ipAddress     String   @db.Inet
+  fingerprint   String   // 浏览器指纹
+  userAgent     String?  @db.Text
+
+  // 使用记录
+  videoId       String   @db.Uuid
+  usedAt        DateTime @default(now()) @db.Timestamptz(6)
+
+  // 地理位置（可选）
+  country       String?
+  city          String?
+
+  @@index([ipAddress])
+  @@index([fingerprint])
+  @@index([ipAddress, fingerprint])
+  @@map("guest_usage")
+}

@@ -67,9 +67,10 @@ export async function PATCH(
       
       // 如果还有其他字段需要更新
       if (Object.keys(otherData).length > 0) {
-        return await updateVideo(id, otherData);
+        const updatedVideo = await updateVideo(id, otherData);
+        return NextResponse.json(updatedVideo);
       }
-      
+
       return NextResponse.json(video);
     }
 

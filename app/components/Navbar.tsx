@@ -33,21 +33,22 @@ export default function Navbar() {
 
     syncedUserId.current = userId;
 
-    fetch('/api/users/sync', {
-      method: 'POST',
-      credentials: 'same-origin',
-    })
-      .then(async (res) => {
-        if (!res.ok) {
-          // 未登录或会话尚未落地，静默忽略，稍后会再次触发
-          if (res.status === 401) return;
-          // 其它错误则释放重试机会
+    (async () => {
+      try {
+        const res = await fetch('/api/users/sync', {
+          method: 'POST',
+          credentials: 'same-origin',
+        });
+        if (!res.ok && res.status !== 401) {
+          // 非授权错误才打印
+          console.debug('User sync failed:', res.status);
           syncedUserId.current = null;
         }
-      })
-      .catch(() => {
+      } catch (error) {
+        // 静默失败，稍后重试
         syncedUserId.current = null;
-      });
+      }
+    })();
   }, [session?.user?.id]);
 
   return (

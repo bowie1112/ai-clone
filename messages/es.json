@@ -255,6 +255,193 @@
         "deleteAccount": "Eliminar Cuenta"
       }
     }
+  },
+  "guestLimit": {
+    "freeTrialAvailable": "Prueba Gratuita Disponible",
+    "limitExceeded": "Límite Excedido",
+    "limitExceededMessage": "Ya has usado tu generación gratuita. Por favor, inicia sesión para continuar.",
+    "remainingAttempts": "{count} generación gratuita restante",
+    "signInButton": "Iniciar Sesión",
+    "formHint": "Prueba gratuita: 1 generación restante",
+    "modal": {
+      "title": "Cuota Gratuita Usada",
+      "message": "Has usado tu generación de video gratuita. ¡Crea una cuenta para obtener más generaciones!",
+      "benefitsTitle": "Cuando te registres, obtendrás:",
+      "benefit1": "Generaciones de video ilimitadas",
+      "benefit2": "Guardar y administrar tus videos",
+      "benefit3": "Acceso a funciones y configuraciones avanzadas",
+      "signUpButton": "Registrarse",
+      "cancelButton": "Tal Vez Más Tarde",
+      "hasAccount": "¿Ya tienes una cuenta?",
+      "signInLink": "Iniciar Sesión"
+    }
+  },
+  "pricing": {
+    "meta": {
+      "title": "Planes de Precios - Generador de Video AI",
+      "description": "Elige el plan perfecto para tus necesidades de creación de video. Precios flexibles con opciones mensuales y anuales.",
+      "keywords": "precios, planes, suscripción, generación de video, video AI"
+    },
+    "title": "Precios Simples y Transparentes",
+    "subtitle": "Elige el plan adecuado para ti",
+    "monthly": "Mensual",
+    "yearly": "Anual",
+    "save": "Ahorra {percent}%",
+    "popular": "Más Popular",
+    "perMonth": "mes",
+    "perYear": "año",
+    "billedAnnually": "Facturado anualmente como {amount}",
+    "features": {
+      "noCard": "No se requiere tarjeta de crédito",
+      "cancelAnytime": "Cancela en cualquier momento",
+      "moneyBack": "Garantía de devolución de 30 días"
+    },
+    "plans": {
+      "free": {
+        "name": "Gratis",
+        "description": "Perfecto para probar",
+        "cta": "Comenzar",
+        "features": {
+          "credits": "10 créditos por mes",
+          "speed": "Velocidad de generación estándar",
+          "resolution": "Resolución hasta 720p",
+          "support": "Soporte básico",
+          "watermark": "Eliminación de marca de agua (costo adicional)"
+        }
+      },
+      "basic": {
+        "name": "Básico",
+        "description": "Para creadores individuales",
+        "cta": "Iniciar Prueba Gratuita",
+        "features": {
+          "credits": "100 créditos por mes",
+          "speed": "Generación rápida",
+          "resolution": "Resolución hasta 1080p",
+          "watermark": "Sin marca de agua",
+          "support": "Soporte por correo electrónico"
+        }
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Para profesionales",
+        "cta": "Iniciar Prueba Gratuita",
+        "features": {
+          "credits": "500 créditos por mes",
+          "speed": "Generación prioritaria",
+          "resolution": "Resolución hasta 4K",
+          "watermark": "Sin marca de agua",
+          "advanced": "Funciones avanzadas",
+          "support": "Soporte prioritario"
+        }
+      },
+      "enterprise": {
+        "name": "Empresarial",
+        "description": "Para equipos grandes",
+        "cta": "Contactar Ventas",
+        "customPrice": "Precio Personalizado",
+        "features": {
+          "credits": "Créditos ilimitados",
+          "server": "Servidor dedicado",
+          "api": "Acceso API",
+          "custom": "Funciones personalizadas",
+          "support": "Soporte dedicado 24/7"
+        }
+      }
+    },
+    "creditPackages": {
+      "title": "¿Necesitas Más Créditos?",
+      "subtitle": "Compra créditos adicionales en cualquier momento",
+      "credits": "Créditos",
+      "save": "Ahorra {percent}%",
+      "bestValue": "Mejor Valor",
+      "buyNow": "Comprar Ahora",
+      "noExpiry": "Los créditos nunca caducan",
+      "note": "Todos los paquetes de créditos incluyen procesamiento prioritario y sin marcas de agua"
+    },
+    "comparison": {
+      "title": "Comparar Todas las Funciones",
+      "subtitle": "Encuentra el plan perfecto para tus necesidades",
+      "feature": "Función",
+      "plans": {
+        "free": "Gratis",
+        "basic": "Básico",
+        "pro": "Pro",
+        "enterprise": "Empresarial"
+      },
+      "popular": "Popular",
+      "unlimited": "Ilimitado",
+      "standard": "Estándar",
+      "fast": "Rápido",
+      "priority": "Prioritario",
+      "dedicated": "Dedicado",
+      "categories": {
+        "basic": "Funciones Básicas",
+        "features": "Funciones Avanzadas",
+        "support": "Soporte"
+      },
+      "features": {
+        "monthlyCredits": "Créditos Mensuales",
+        "speed": "Velocidad de Generación",
+        "resolution": "Resolución Máxima",
+        "watermark": "Marca de Agua",
+        "batchGeneration": "Generación por Lotes",
+        "advancedFeatures": "Funciones Avanzadas",
+        "apiAccess": "Acceso API",
+        "customBranding": "Marca Personalizada",
+        "emailSupport": "Soporte por Correo",
+        "prioritySupport": "Soporte Prioritario",
+        "dedicatedSupport": "Soporte Dedicado 24/7"
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestros precios",
+      "q1": {
+        "question": "¿Qué son los créditos y cómo funcionan?",
+        "answer": "Los créditos se utilizan para generar videos. Cada generación de video consume créditos según la duración y la calidad. Por ejemplo, un video de 5 segundos a 1080p usa aproximadamente 5 créditos."
+      },
+      "q2": {
+        "question": "¿Los créditos caducan?",
+        "answer": "Los créditos de suscripción se reinician mensualmente. Los paquetes de créditos comprados nunca caducan y se acumulan indefinidamente."
+      },
+      "q3": {
+        "question": "¿Puedo cancelar mi suscripción en cualquier momento?",
+        "answer": "Sí, puedes cancelar en cualquier momento desde la configuración de tu cuenta. Continuarás teniendo acceso hasta el final de tu período de facturación."
+      },
+      "q4": {
+        "question": "¿Qué métodos de pago aceptan?",
+        "answer": "Aceptamos todas las tarjetas de crédito principales (Visa, MasterCard, American Express), PayPal y transferencias bancarias para planes empresariales."
+      },
+      "q5": {
+        "question": "¿Cómo se fija el precio del plan Empresarial?",
+        "answer": "El precio empresarial se personaliza según tus necesidades específicas, incluyendo el uso esperado, funciones personalizadas y requisitos de soporte. Contacta a nuestro equipo de ventas para obtener una cotización."
+      },
+      "q6": {
+        "question": "¿Los créditos no utilizados se acumulan?",
+        "answer": "Los créditos de suscripción mensual no se acumulan. Sin embargo, los paquetes de créditos comprados nunca caducan y se acumulan en tu saldo."
+      },
+      "q7": {
+        "question": "¿Puedo actualizar o degradar mi plan?",
+        "answer": "Sí, puedes cambiar tu plan en cualquier momento. Las actualizaciones surten efecto de inmediato, mientras que las degradaciones surten efecto al inicio de tu próximo período de facturación."
+      },
+      "q8": {
+        "question": "¿Hay una política de reembolso?",
+        "answer": "Ofrecemos una garantía de devolución de dinero de 30 días para suscriptores primerizos. Si no estás satisfecho, contáctanos para obtener un reembolso completo dentro de los 30 días de la compra."
+      },
+      "stillHaveQuestions": "¿Aún tienes preguntas?",
+      "contactSupport": "Contactar Soporte"
+    },
+    "cta": {
+      "title": "¿Listo para Empezar a Crear?",
+      "subtitle": "Únete a miles de creadores que usan IA para transformar sus ideas en videos impresionantes",
+      "getStarted": "Comenzar Gratis",
+      "contactSales": "Contactar Ventas",
+      "trust": {
+        "noCredit": "No se requiere tarjeta de crédito",
+        "instantSetup": "Configuración instantánea",
+        "moneyBack": "Devolución de dinero de 30 días"
+      }
+    }
   }
 }
 
