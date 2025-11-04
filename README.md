@@ -34,3 +34,20 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Auth (Better Auth + Google)
+
+Set the following env vars in `.env.local`:
+
+```
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+# optional but recommended
+BETTER_AUTH_SECRET=
+```
+
+Then run `npm run dev` and use the "使用 Google 登录" button in the navbar.
+
+### Enable/disable Google login at build time
+
+Set `NEXT_PUBLIC_GOOGLE_LOGIN_ENABLED=1` when you have provided both `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`. If unset, the button will be disabled to avoid server 500 errors during development.

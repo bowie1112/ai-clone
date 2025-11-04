@@ -1,0 +1,263 @@
+{
+  "common": {
+    "languageSelector": "语言",
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "cancel": "取消",
+    "confirm": "确认",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "close": "关闭",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "search": "搜索",
+    "filter": "筛选",
+    "sort": "排序",
+    "export": "导出",
+    "import": "导入",
+    "download": "下载",
+    "upload": "上传",
+    "viewDetails": "查看详情",
+    "learnMore": "了解更多"
+  },
+  "nav": {
+    "home": "首页",
+    "features": "功能",
+    "pricing": "价格",
+    "about": "关于",
+    "contact": "联系我们",
+    "login": "登录",
+    "signup": "注册",
+    "dashboard": "控制台",
+    "logout": "退出登录"
+  },
+  "hero": {
+    "title": "用 AI 创作惊艳视频",
+    "subtitle": "体验 OpenAI 最新的 Sora 2 技术 - 物理精确的运动模拟、同步音频生成、逼真的场景渲染。",
+    "cta": "开始创作",
+    "watchDemo": "观看演示",
+    "description": "只需输入文字描述，即可将您的创意转化为专业品质的视频。无需编辑技能。"
+  },
+  "features": {
+    "title": "强大功能",
+    "subtitle": "创作精彩视频所需的一切",
+    "feature1": {
+      "title": "AI 驱动生成",
+      "description": "先进的 AI 技术根据您的文字描述创建逼真的视频"
+    },
+    "feature2": {
+      "title": "物理模拟",
+      "description": "精确的运动和物理模拟，呈现自然逼真的效果"
+    },
+    "feature3": {
+      "title": "音频同步",
+      "description": "自动生成与视频完美匹配的音频"
+    },
+    "feature4": {
+      "title": "4K 画质",
+      "description": "以令人惊叹的 4K 分辨率导出您的视频"
+    },
+    "feature5": {
+      "title": "快速处理",
+      "description": "几分钟而非几小时即可生成视频"
+    },
+    "feature6": {
+      "title": "轻松编辑",
+      "description": "简单的工具来完善您的创作"
+    }
+  },
+  "generator": {
+    "title": "生成您的视频",
+    "inputLabel": "描述您的视频",
+    "inputPlaceholder": "日落时分宁静的山景，鸟儿飞翔...",
+    "generateButton": "生成视频",
+    "generating": "生成中...",
+    "style": "风格",
+    "duration": "时长",
+    "quality": "画质",
+    "advanced": "高级设置"
+  },
+  "useCases": {
+    "title": "使用场景",
+    "subtitle": "适合任何创意项目",
+    "marketing": {
+      "title": "营销推广",
+      "description": "为您的产品和服务创建引人入胜的宣传视频"
+    },
+    "education": {
+      "title": "教育培训",
+      "description": "轻松制作教育内容和教程"
+    },
+    "entertainment": {
+      "title": "娱乐内容",
+      "description": "将您的创意故事和概念变为现实"
+    },
+    "social": {
+      "title": "社交媒体",
+      "description": "为您的社交渠道生成热门内容"
+    }
+  },
+  "testimonials": {
+    "title": "用户评价",
+    "subtitle": "加入数千名满意的创作者",
+    "testimonial1": {
+      "text": "这个工具彻底改变了我创作内容的方式。质量令人难以置信！",
+      "author": "Sarah Chen",
+      "role": "内容创作者"
+    },
+    "testimonial2": {
+      "text": "我可以在几分钟内制作出专业视频。这对我的业务来说是一个改变游戏规则的工具。",
+      "author": "Michael Rodriguez",
+      "role": "营销总监"
+    },
+    "testimonial3": {
+      "text": "AI 完全理解我的需求。结果总是令人印象深刻。",
+      "author": "Yuki Tanaka",
+      "role": "电影制作人"
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "有疑问？我们有答案",
+    "question1": {
+      "q": "生成视频需要多长时间？",
+      "a": "大多数视频在 2-5 分钟内生成，具体取决于长度和复杂度。"
+    },
+    "question2": {
+      "q": "支持哪些视频格式？",
+      "a": "我们支持 MP4、MOV 和 WebM 格式，并提供多种分辨率选项。"
+    },
+    "question3": {
+      "q": "我可以编辑生成的视频吗？",
+      "a": "可以，您可以使用我们的内置编辑器进行调整和完善。"
+    },
+    "question4": {
+      "q": "有免费试用吗？",
+      "a": "是的，我们提供 3 次视频生成的免费试用，帮助您开始使用。"
+    },
+    "question5": {
+      "q": "支持哪些语言？",
+      "a": "我们支持英语、中文、日语和西班牙语的输入和输出。"
+    }
+  },
+  "cta": {
+    "title": "准备开始创作了吗？",
+    "subtitle": "加入数千名使用 AI 将创意变为现实的创作者",
+    "button": "立即开始",
+    "noCredit": "无需信用卡"
+  },
+  "footer": {
+    "description": "使用 AI 技术创作惊艳视频",
+    "product": "产品",
+    "features": "功能",
+    "pricing": "价格",
+    "examples": "示例",
+    "company": "公司",
+    "about": "关于我们",
+    "blog": "博客",
+    "careers": "招聘",
+    "support": "支持",
+    "help": "帮助中心",
+    "documentation": "文档",
+    "contact": "联系我们",
+    "legal": "法律",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "copyright": "© 2025 Sora AI 视频生成器。保留所有权利。"
+  },
+  "auth": {
+    "login": {
+      "title": "欢迎回来",
+      "subtitle": "登录您的账户",
+      "email": "邮箱",
+      "password": "密码",
+      "rememberMe": "记住我",
+      "forgotPassword": "忘记密码？",
+      "submit": "登录",
+      "noAccount": "还没有账户？",
+      "signUpLink": "注册"
+    },
+    "signup": {
+      "title": "创建账户",
+      "subtitle": "今天就开始创作精彩视频",
+      "name": "姓名",
+      "email": "邮箱",
+      "password": "密码",
+      "confirmPassword": "确认密码",
+      "agree": "我同意",
+      "terms": "服务条款",
+      "and": "和",
+      "privacy": "隐私政策",
+      "submit": "创建账户",
+      "hasAccount": "已有账户？",
+      "signInLink": "登录"
+    },
+    "errors": {
+      "invalidEmail": "无效的邮箱地址",
+      "passwordTooShort": "密码至少需要 8 个字符",
+      "passwordMismatch": "密码不匹配",
+      "emailExists": "邮箱已存在",
+      "invalidCredentials": "邮箱或密码无效",
+      "serverError": "服务器错误，请稍后再试"
+    }
+  },
+  "dashboard": {
+    "title": "控制台",
+    "welcome": "欢迎回来，{name}！",
+    "stats": {
+      "videosCreated": "已创建视频",
+      "storageUsed": "已用存储",
+      "creditsRemaining": "剩余积分",
+      "totalViews": "总观看次数"
+    },
+    "recentVideos": {
+      "title": "最近的视频",
+      "empty": "还没有视频。开始创作吧！",
+      "createdAt": "创建于 {date}",
+      "status": {
+        "completed": "已完成",
+        "processing": "处理中",
+        "failed": "失败"
+      }
+    },
+    "quickActions": {
+      "title": "快速操作",
+      "newVideo": "创建新视频",
+      "viewAll": "查看所有视频",
+      "upgrade": "升级套餐",
+      "settings": "设置"
+    },
+    "settings": {
+      "title": "设置",
+      "profile": {
+        "title": "个人资料",
+        "name": "姓名",
+        "email": "邮箱",
+        "avatar": "头像",
+        "updateProfile": "更新资料"
+      },
+      "preferences": {
+        "title": "偏好设置",
+        "language": "语言",
+        "theme": "主题",
+        "notifications": "通知",
+        "emailNotifications": "邮件通知"
+      },
+      "account": {
+        "title": "账户",
+        "plan": "当前套餐",
+        "usage": "使用情况",
+        "billing": "账单",
+        "changePassword": "修改密码",
+        "deleteAccount": "删除账户"
+      }
+    }
+  }
+}
+
+
+
+

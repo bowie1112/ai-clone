@@ -1,0 +1,80 @@
+// Prisma Schema 文件
+// 配置 Supabase PostgreSQL 数据库
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// 用户模型
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  avatar    String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // 关联关系
+  videos Video[]
+
+  @@map("users")
+}
+
+// 视频生成历史模型
+model Video {
+  id          String   @id @default(cuid())
+  userId      String?
+  user        User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  
+  // 视频信息
+  prompt      String   @db.Text
+  title       String?
+  description String?  @db.Text
+  
+  // 生成参数
+  style       String?
+  duration    Int?     // 秒
+  quality     String?  // "standard" | "hd" | "4k"
+  aspectRatio String?  // "16:9" | "9:16" | "1:1"
+  
+  // 状态和结果
+  status      VideoStatus @default(PENDING)
+  videoUrl    String?
+  thumbnailUrl String?
+  
+  // Luma API 相关
+  lumaId      String?  @unique
+  lumaData    Json?
+  
+  // 元数据
+  locale      String   @default("en")
+  fileSize    Int?     // 字节
+  duration_actual Float? // 实际时长（秒）
+  width       Int?
+  height      Int?
+  
+  // 时间戳
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  completedAt DateTime?
+
+  @@map("videos")
+  @@index([userId])
+  @@index([status])
+  @@index([createdAt])
+}
+
+// 视频状态枚举
+enum VideoStatus {
+  PENDING     // 等待处理
+  PROCESSING  // 处理中
+  COMPLETED   // 完成
+  FAILED      // 失败
+  CANCELLED   // 取消
+}

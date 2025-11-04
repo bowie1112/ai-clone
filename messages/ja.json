@@ -1,0 +1,263 @@
+{
+  "common": {
+    "languageSelector": "言語",
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "success": "成功",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "save": "保存",
+    "delete": "削除",
+    "edit": "編集",
+    "close": "閉じる",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "search": "検索",
+    "filter": "フィルター",
+    "sort": "並び替え",
+    "export": "エクスポート",
+    "import": "インポート",
+    "download": "ダウンロード",
+    "upload": "アップロード",
+    "viewDetails": "詳細を見る",
+    "learnMore": "詳しく見る"
+  },
+  "nav": {
+    "home": "ホーム",
+    "features": "機能",
+    "pricing": "料金",
+    "about": "概要",
+    "contact": "お問い合わせ",
+    "login": "ログイン",
+    "signup": "サインアップ",
+    "dashboard": "ダッシュボード",
+    "logout": "ログアウト"
+  },
+  "hero": {
+    "title": "AIで素晴らしい動画を作成",
+    "subtitle": "OpenAIの最新Sora 2技術を体験 - 物理的に正確なモーションシミュレーション、同期されたオーディオ生成、リアルなシーンレンダリング。",
+    "cta": "作成を開始",
+    "watchDemo": "デモを見る",
+    "description": "テキスト説明だけで、アイデアをプロ品質の動画に変換します。編集スキルは不要です。"
+  },
+  "features": {
+    "title": "強力な機能",
+    "subtitle": "素晴らしい動画を作成するために必要なすべて",
+    "feature1": {
+      "title": "AI駆動の生成",
+      "description": "高度なAI技術がテキスト説明からリアルな動画を作成します"
+    },
+    "feature2": {
+      "title": "物理シミュレーション",
+      "description": "自然な結果のための正確なモーションと物理シミュレーション"
+    },
+    "feature3": {
+      "title": "オーディオ同期",
+      "description": "動画に完璧にマッチする自動生成オーディオ"
+    },
+    "feature4": {
+      "title": "4K品質",
+      "description": "美しい4K解像度で動画をエクスポート"
+    },
+    "feature5": {
+      "title": "高速処理",
+      "description": "数時間ではなく数分で動画を生成"
+    },
+    "feature6": {
+      "title": "簡単な編集",
+      "description": "作品を洗練させるシンプルなツール"
+    }
+  },
+  "generator": {
+    "title": "動画を生成",
+    "inputLabel": "動画を説明してください",
+    "inputPlaceholder": "夕暮れの静かな山の風景、鳥が飛んでいる...",
+    "generateButton": "動画を生成",
+    "generating": "生成中...",
+    "style": "スタイル",
+    "duration": "長さ",
+    "quality": "品質",
+    "advanced": "詳細設定"
+  },
+  "useCases": {
+    "title": "使用例",
+    "subtitle": "あらゆるクリエイティブプロジェクトに最適",
+    "marketing": {
+      "title": "マーケティング",
+      "description": "製品やサービスの魅力的なプロモーション動画を作成"
+    },
+    "education": {
+      "title": "教育",
+      "description": "教育コンテンツやチュートリアルを簡単に制作"
+    },
+    "entertainment": {
+      "title": "エンターテイメント",
+      "description": "クリエイティブなストーリーとコンセプトを実現"
+    },
+    "social": {
+      "title": "ソーシャルメディア",
+      "description": "ソーシャルチャンネル向けのバイラルコンテンツを生成"
+    }
+  },
+  "testimonials": {
+    "title": "ユーザーの声",
+    "subtitle": "満足しているクリエイター数千人に参加",
+    "testimonial1": {
+      "text": "このツールはコンテンツ作成の方法を革命的に変えました。品質が素晴らしい！",
+      "author": "Sarah Chen",
+      "role": "コンテンツクリエイター"
+    },
+    "testimonial2": {
+      "text": "数分でプロフェッショナルな動画を制作できます。ビジネスにとってゲームチェンジャーです。",
+      "author": "Michael Rodriguez",
+      "role": "マーケティングディレクター"
+    },
+    "testimonial3": {
+      "text": "AIは私が望むものを正確に理解します。結果は常に印象的です。",
+      "author": "Yuki Tanaka",
+      "role": "映画監督"
+    }
+  },
+  "faq": {
+    "title": "よくある質問",
+    "subtitle": "質問がありますか？お答えします",
+    "question1": {
+      "q": "動画を生成するのにどのくらい時間がかかりますか？",
+      "a": "ほとんどの動画は、長さと複雑さに応じて2〜5分で生成されます。"
+    },
+    "question2": {
+      "q": "どの動画形式がサポートされていますか？",
+      "a": "MP4、MOV、WebM形式と様々な解像度オプションをサポートしています。"
+    },
+    "question3": {
+      "q": "生成された動画を編集できますか？",
+      "a": "はい、内蔵エディタを使用して調整や改良ができます。"
+    },
+    "question4": {
+      "q": "無料トライアルはありますか？",
+      "a": "はい、開始するための3つの動画生成を含む無料トライアルを提供しています。"
+    },
+    "question5": {
+      "q": "どの言語がサポートされていますか？",
+      "a": "入力と出力の両方で英語、中国語、日本語、スペイン語をサポートしています。"
+    }
+  },
+  "cta": {
+    "title": "作成を始める準備はできましたか？",
+    "subtitle": "AIを使ってアイデアを実現する数千人のクリエイターに参加",
+    "button": "今すぐ始める",
+    "noCredit": "クレジットカード不要"
+  },
+  "footer": {
+    "description": "AI技術で素晴らしい動画を作成",
+    "product": "製品",
+    "features": "機能",
+    "pricing": "料金",
+    "examples": "例",
+    "company": "会社",
+    "about": "会社概要",
+    "blog": "ブログ",
+    "careers": "採用情報",
+    "support": "サポート",
+    "help": "ヘルプセンター",
+    "documentation": "ドキュメント",
+    "contact": "お問い合わせ",
+    "legal": "法的情報",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "copyright": "© 2025 Sora AI ビデオジェネレーター。全著作権所有。"
+  },
+  "auth": {
+    "login": {
+      "title": "お帰りなさい",
+      "subtitle": "アカウントにサインイン",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "rememberMe": "ログイン状態を保持",
+      "forgotPassword": "パスワードをお忘れですか？",
+      "submit": "サインイン",
+      "noAccount": "アカウントをお持ちでないですか？",
+      "signUpLink": "サインアップ"
+    },
+    "signup": {
+      "title": "アカウント作成",
+      "subtitle": "今日から素晴らしい動画を作成",
+      "name": "氏名",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "confirmPassword": "パスワード確認",
+      "agree": "同意します",
+      "terms": "利用規約",
+      "and": "と",
+      "privacy": "プライバシーポリシー",
+      "submit": "アカウント作成",
+      "hasAccount": "既にアカウントをお持ちですか？",
+      "signInLink": "サインイン"
+    },
+    "errors": {
+      "invalidEmail": "無効なメールアドレス",
+      "passwordTooShort": "パスワードは8文字以上である必要があります",
+      "passwordMismatch": "パスワードが一致しません",
+      "emailExists": "メールアドレスは既に存在します",
+      "invalidCredentials": "メールアドレスまたはパスワードが無効です",
+      "serverError": "サーバーエラー、後でもう一度お試しください"
+    }
+  },
+  "dashboard": {
+    "title": "ダッシュボード",
+    "welcome": "お帰りなさい、{name}さん！",
+    "stats": {
+      "videosCreated": "作成された動画",
+      "storageUsed": "使用済みストレージ",
+      "creditsRemaining": "残りのクレジット",
+      "totalViews": "総視聴回数"
+    },
+    "recentVideos": {
+      "title": "最近の動画",
+      "empty": "まだ動画がありません。作成を始めましょう！",
+      "createdAt": "{date}に作成",
+      "status": {
+        "completed": "完了",
+        "processing": "処理中",
+        "failed": "失敗"
+      }
+    },
+    "quickActions": {
+      "title": "クイックアクション",
+      "newVideo": "新しい動画を作成",
+      "viewAll": "すべての動画を表示",
+      "upgrade": "プランをアップグレード",
+      "settings": "設定"
+    },
+    "settings": {
+      "title": "設定",
+      "profile": {
+        "title": "プロフィール",
+        "name": "名前",
+        "email": "メール",
+        "avatar": "アバター",
+        "updateProfile": "プロフィール更新"
+      },
+      "preferences": {
+        "title": "設定",
+        "language": "言語",
+        "theme": "テーマ",
+        "notifications": "通知",
+        "emailNotifications": "メール通知"
+      },
+      "account": {
+        "title": "アカウント",
+        "plan": "現在のプラン",
+        "usage": "使用状況",
+        "billing": "請求",
+        "changePassword": "パスワード変更",
+        "deleteAccount": "アカウント削除"
+      }
+    }
+  }
+}
+
+
+
+

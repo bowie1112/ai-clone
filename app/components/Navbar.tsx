@@ -1,9 +1,21 @@
+/**
+ * 导航栏组件
+ * 带有滚动效果、语言切换器和认证按钮
+ */
+
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { useTranslations } from 'next-intl';
+import { authClient } from '@/lib/auth-client';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { data: session } = authClient.useSession();
+  const googleEnabled = process.env.NEXT_PUBLIC_GOOGLE_LOGIN_ENABLED === '1';
+  const t = useTranslations('nav');
+  const syncedUserId = useRef<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +24,31 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    const userId = session?.user?.id;
+    if (!userId || syncedUserId.current === userId) {
+      return;
+    }
+
+    syncedUserId.current = userId;
+
+    fetch('/api/users/sync', {
+      method: 'POST',
+      credentials: 'same-origin',
+    })
+      .then(async (res) => {
+        if (!res.ok) {
+          // 未登录或会话尚未落地，静默忽略，稍后会再次触发
+          if (res.status === 401) return;
+          // 其它错误则释放重试机会
+          syncedUserId.current = null;
+        }
+      })
+      .catch(() => {
+        syncedUserId.current = null;
+      });
+  }, [session?.user?.id]);
 
   return (
     <nav
@@ -47,7 +84,7 @@ export default function Navbar() {
               </svg>
             </div>
             <span className="text-xl font-bold text-gray-900">
-              Sora 2 AI Video Generator
+              Sora 2 AI
             </span>
           </div>
 
@@ -57,32 +94,57 @@ export default function Navbar() {
               href="#features"
               className="text-gray-600 hover:text-gray-900 transition-colors font-medium"
             >
-              功能
-            </a>
-            <a
-              href="#examples"
-              className="text-gray-600 hover:text-gray-900 transition-colors font-medium"
-            >
-              案例
+              {t('features')}
             </a>
             <a
               href="#pricing"
               className="text-gray-600 hover:text-gray-900 transition-colors font-medium"
             >
-              定价
+              {t('pricing')}
             </a>
             <a
-              href="#faq"
+              href="#about"
               className="text-gray-600 hover:text-gray-900 transition-colors font-medium"
             >
-              常见问题
+              {t('about')}
             </a>
           </div>
 
-          {/* CTA Button */}
-          <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2.5 rounded-full font-medium hover:shadow-lg hover:scale-105 transition-all duration-300">
-            开始创作
-          </button>
+          {/* Auth Buttons & Language Switcher */}
+          <div className="flex items-center gap-3">
+            <LanguageSwitcher />
+            
+            {session?.user ? (
+              <>
+                <span className="hidden sm:inline text-gray-700">{session.user.email ?? t('login')}</span>
+                <button
+                  onClick={async () => {
+                    await authClient.signOut();
+                  }}
+                  className="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium hover:bg-gray-200 transition-all duration-300"
+                >
+                  {t('logout')}
+                </button>
+              </>
+            ) : googleEnabled ? (
+              <button
+                onClick={async () => {
+                  await authClient.signIn.social({ provider: 'google', callbackURL: '/' });
+                }}
+                className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2.5 rounded-full font-medium hover:shadow-lg hover:scale-105 transition-all duration-300"
+              >
+                {t('login')}
+              </button>
+            ) : (
+              <button
+                disabled
+                className="bg-gray-200 text-gray-500 px-6 py-2.5 rounded-full font-medium cursor-not-allowed"
+                title={t('login')}
+              >
+                {t('login')}
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </nav>

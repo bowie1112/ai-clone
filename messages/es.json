@@ -1,0 +1,263 @@
+{
+  "common": {
+    "languageSelector": "Idioma",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "close": "Cerrar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "export": "Exportar",
+    "import": "Importar",
+    "download": "Descargar",
+    "upload": "Subir",
+    "viewDetails": "Ver Detalles",
+    "learnMore": "Saber Más"
+  },
+  "nav": {
+    "home": "Inicio",
+    "features": "Características",
+    "pricing": "Precios",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "login": "Iniciar Sesión",
+    "signup": "Registrarse",
+    "dashboard": "Panel",
+    "logout": "Cerrar Sesión"
+  },
+  "hero": {
+    "title": "Crea Videos Impresionantes con IA",
+    "subtitle": "Experimenta la última tecnología Sora 2 de OpenAI - simulación de movimiento físicamente precisa, generación de audio sincronizado y renderizado de escenas realistas.",
+    "cta": "Comenzar a Crear",
+    "watchDemo": "Ver Demo",
+    "description": "Transforma tus ideas en videos de calidad profesional con solo una descripción de texto. No se requieren habilidades de edición."
+  },
+  "features": {
+    "title": "Características Potentes",
+    "subtitle": "Todo lo que necesitas para crear videos increíbles",
+    "feature1": {
+      "title": "Generación Impulsada por IA",
+      "description": "Tecnología de IA avanzada crea videos realistas a partir de tus descripciones de texto"
+    },
+    "feature2": {
+      "title": "Simulación Física",
+      "description": "Simulación de movimiento y física precisa para resultados de aspecto natural"
+    },
+    "feature3": {
+      "title": "Sincronización de Audio",
+      "description": "Audio generado automáticamente que coincide perfectamente con tu video"
+    },
+    "feature4": {
+      "title": "Calidad 4K",
+      "description": "Exporta tus videos en impresionante resolución 4K"
+    },
+    "feature5": {
+      "title": "Procesamiento Rápido",
+      "description": "Genera videos en minutos, no horas"
+    },
+    "feature6": {
+      "title": "Edición Fácil",
+      "description": "Herramientas simples para refinar y perfeccionar tus creaciones"
+    }
+  },
+  "generator": {
+    "title": "Genera Tu Video",
+    "inputLabel": "Describe tu video",
+    "inputPlaceholder": "Un paisaje montañoso sereno al atardecer con pájaros volando...",
+    "generateButton": "Generar Video",
+    "generating": "Generando...",
+    "style": "Estilo",
+    "duration": "Duración",
+    "quality": "Calidad",
+    "advanced": "Configuración Avanzada"
+  },
+  "useCases": {
+    "title": "Casos de Uso",
+    "subtitle": "Perfecto para cualquier proyecto creativo",
+    "marketing": {
+      "title": "Marketing",
+      "description": "Crea videos promocionales atractivos para tus productos y servicios"
+    },
+    "education": {
+      "title": "Educación",
+      "description": "Produce contenido educativo y tutoriales con facilidad"
+    },
+    "entertainment": {
+      "title": "Entretenimiento",
+      "description": "Da vida a tus historias y conceptos creativos"
+    },
+    "social": {
+      "title": "Redes Sociales",
+      "description": "Genera contenido viral para tus canales sociales"
+    }
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen Nuestros Usuarios",
+    "subtitle": "Únete a miles de creadores satisfechos",
+    "testimonial1": {
+      "text": "Esta herramienta ha revolucionado cómo creo contenido. ¡La calidad es increíble!",
+      "author": "Sarah Chen",
+      "role": "Creadora de Contenido"
+    },
+    "testimonial2": {
+      "text": "Puedo producir videos profesionales en minutos. Es un cambio de juego para mi negocio.",
+      "author": "Michael Rodriguez",
+      "role": "Director de Marketing"
+    },
+    "testimonial3": {
+      "text": "La IA entiende exactamente lo que quiero. Los resultados siempre son impresionantes.",
+      "author": "Yuki Tanaka",
+      "role": "Cineasta"
+    }
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "¿Tienes preguntas? Tenemos respuestas",
+    "question1": {
+      "q": "¿Cuánto tiempo tarda en generarse un video?",
+      "a": "La mayoría de los videos se generan en 2-5 minutos, dependiendo de la longitud y complejidad."
+    },
+    "question2": {
+      "q": "¿Qué formatos de video son compatibles?",
+      "a": "Admitimos formatos MP4, MOV y WebM con varias opciones de resolución."
+    },
+    "question3": {
+      "q": "¿Puedo editar los videos generados?",
+      "a": "Sí, puedes hacer ajustes y refinamientos usando nuestro editor integrado."
+    },
+    "question4": {
+      "q": "¿Hay una prueba gratuita?",
+      "a": "Sí, ofrecemos una prueba gratuita con 3 generaciones de video para comenzar."
+    },
+    "question5": {
+      "q": "¿Qué idiomas son compatibles?",
+      "a": "Admitimos inglés, chino, japonés y español tanto para entrada como para salida."
+    }
+  },
+  "cta": {
+    "title": "¿Listo para Crear?",
+    "subtitle": "Únete a miles de creadores que usan IA para dar vida a sus ideas",
+    "button": "Comenzar Ahora",
+    "noCredit": "No se requiere tarjeta de crédito"
+  },
+  "footer": {
+    "description": "Crea videos impresionantes con tecnología impulsada por IA",
+    "product": "Producto",
+    "features": "Características",
+    "pricing": "Precios",
+    "examples": "Ejemplos",
+    "company": "Empresa",
+    "about": "Acerca de Nosotros",
+    "blog": "Blog",
+    "careers": "Carreras",
+    "support": "Soporte",
+    "help": "Centro de Ayuda",
+    "documentation": "Documentación",
+    "contact": "Contáctanos",
+    "legal": "Legal",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "copyright": "© 2025 Generador de Video Sora AI. Todos los derechos reservados."
+  },
+  "auth": {
+    "login": {
+      "title": "Bienvenido de Nuevo",
+      "subtitle": "Inicia sesión en tu cuenta",
+      "email": "Correo Electrónico",
+      "password": "Contraseña",
+      "rememberMe": "Recuérdame",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "submit": "Iniciar Sesión",
+      "noAccount": "¿No tienes una cuenta?",
+      "signUpLink": "Regístrate"
+    },
+    "signup": {
+      "title": "Crear Cuenta",
+      "subtitle": "Comienza a crear videos increíbles hoy",
+      "name": "Nombre Completo",
+      "email": "Correo Electrónico",
+      "password": "Contraseña",
+      "confirmPassword": "Confirmar Contraseña",
+      "agree": "Acepto los",
+      "terms": "Términos de Servicio",
+      "and": "y",
+      "privacy": "Política de Privacidad",
+      "submit": "Crear Cuenta",
+      "hasAccount": "¿Ya tienes una cuenta?",
+      "signInLink": "Iniciar sesión"
+    },
+    "errors": {
+      "invalidEmail": "Dirección de correo electrónico no válida",
+      "passwordTooShort": "La contraseña debe tener al menos 8 caracteres",
+      "passwordMismatch": "Las contraseñas no coinciden",
+      "emailExists": "El correo electrónico ya existe",
+      "invalidCredentials": "Correo electrónico o contraseña no válidos",
+      "serverError": "Error del servidor, por favor intenta más tarde"
+    }
+  },
+  "dashboard": {
+    "title": "Panel",
+    "welcome": "¡Bienvenido de nuevo, {name}!",
+    "stats": {
+      "videosCreated": "Videos Creados",
+      "storageUsed": "Almacenamiento Usado",
+      "creditsRemaining": "Créditos Restantes",
+      "totalViews": "Vistas Totales"
+    },
+    "recentVideos": {
+      "title": "Videos Recientes",
+      "empty": "Aún no hay videos. ¡Comienza a crear!",
+      "createdAt": "Creado el {date}",
+      "status": {
+        "completed": "Completado",
+        "processing": "Procesando",
+        "failed": "Fallido"
+      }
+    },
+    "quickActions": {
+      "title": "Acciones Rápidas",
+      "newVideo": "Crear Nuevo Video",
+      "viewAll": "Ver Todos los Videos",
+      "upgrade": "Actualizar Plan",
+      "settings": "Configuración"
+    },
+    "settings": {
+      "title": "Configuración",
+      "profile": {
+        "title": "Perfil",
+        "name": "Nombre",
+        "email": "Correo Electrónico",
+        "avatar": "Avatar",
+        "updateProfile": "Actualizar Perfil"
+      },
+      "preferences": {
+        "title": "Preferencias",
+        "language": "Idioma",
+        "theme": "Tema",
+        "notifications": "Notificaciones",
+        "emailNotifications": "Notificaciones por Correo"
+      },
+      "account": {
+        "title": "Cuenta",
+        "plan": "Plan Actual",
+        "usage": "Uso",
+        "billing": "Facturación",
+        "changePassword": "Cambiar Contraseña",
+        "deleteAccount": "Eliminar Cuenta"
+      }
+    }
+  }
+}
+
+
+
+

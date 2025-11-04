@@ -1,0 +1,263 @@
+{
+  "common": {
+    "languageSelector": "Language",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "export": "Export",
+    "import": "Import",
+    "download": "Download",
+    "upload": "Upload",
+    "viewDetails": "View Details",
+    "learnMore": "Learn More"
+  },
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "signup": "Sign Up",
+    "dashboard": "Dashboard",
+    "logout": "Logout"
+  },
+  "hero": {
+    "title": "Create Stunning Videos with AI",
+    "subtitle": "Experience OpenAI's latest Sora 2 technology - physics-accurate motion simulation, synchronized audio generation, and realistic scene rendering.",
+    "cta": "Start Creating",
+    "watchDemo": "Watch Demo",
+    "description": "Transform your ideas into professional-quality videos with just a text description. No editing skills required."
+  },
+  "features": {
+    "title": "Powerful Features",
+    "subtitle": "Everything you need to create amazing videos",
+    "feature1": {
+      "title": "AI-Powered Generation",
+      "description": "Advanced AI technology creates realistic videos from your text descriptions"
+    },
+    "feature2": {
+      "title": "Physics Simulation",
+      "description": "Accurate motion and physics simulation for natural-looking results"
+    },
+    "feature3": {
+      "title": "Audio Sync",
+      "description": "Automatically generated audio that perfectly matches your video"
+    },
+    "feature4": {
+      "title": "4K Quality",
+      "description": "Export your videos in stunning 4K resolution"
+    },
+    "feature5": {
+      "title": "Fast Processing",
+      "description": "Generate videos in minutes, not hours"
+    },
+    "feature6": {
+      "title": "Easy Editing",
+      "description": "Simple tools to refine and perfect your creations"
+    }
+  },
+  "generator": {
+    "title": "Generate Your Video",
+    "inputLabel": "Describe your video",
+    "inputPlaceholder": "A serene mountain landscape at sunset with birds flying...",
+    "generateButton": "Generate Video",
+    "generating": "Generating...",
+    "style": "Style",
+    "duration": "Duration",
+    "quality": "Quality",
+    "advanced": "Advanced Settings"
+  },
+  "useCases": {
+    "title": "Use Cases",
+    "subtitle": "Perfect for any creative project",
+    "marketing": {
+      "title": "Marketing",
+      "description": "Create engaging promotional videos for your products and services"
+    },
+    "education": {
+      "title": "Education",
+      "description": "Produce educational content and tutorials with ease"
+    },
+    "entertainment": {
+      "title": "Entertainment",
+      "description": "Bring your creative stories and concepts to life"
+    },
+    "social": {
+      "title": "Social Media",
+      "description": "Generate viral-worthy content for your social channels"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Users Say",
+    "subtitle": "Join thousands of satisfied creators",
+    "testimonial1": {
+      "text": "This tool has revolutionized how I create content. The quality is incredible!",
+      "author": "Sarah Chen",
+      "role": "Content Creator"
+    },
+    "testimonial2": {
+      "text": "I can produce professional videos in minutes. It's a game-changer for my business.",
+      "author": "Michael Rodriguez",
+      "role": "Marketing Director"
+    },
+    "testimonial3": {
+      "text": "The AI understands exactly what I want. The results are always impressive.",
+      "author": "Yuki Tanaka",
+      "role": "Filmmaker"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Got questions? We've got answers",
+    "question1": {
+      "q": "How long does it take to generate a video?",
+      "a": "Most videos are generated in 2-5 minutes, depending on length and complexity."
+    },
+    "question2": {
+      "q": "What video formats are supported?",
+      "a": "We support MP4, MOV, and WebM formats with various resolution options."
+    },
+    "question3": {
+      "q": "Can I edit the generated videos?",
+      "a": "Yes, you can make adjustments and refinements using our built-in editor."
+    },
+    "question4": {
+      "q": "Is there a free trial?",
+      "a": "Yes, we offer a free trial with 3 video generations to get you started."
+    },
+    "question5": {
+      "q": "What languages are supported?",
+      "a": "We support English, Chinese, Japanese, and Spanish for both input and output."
+    }
+  },
+  "cta": {
+    "title": "Ready to Create?",
+    "subtitle": "Join thousands of creators using AI to bring their ideas to life",
+    "button": "Get Started Now",
+    "noCredit": "No credit card required"
+  },
+  "footer": {
+    "description": "Create stunning videos with AI-powered technology",
+    "product": "Product",
+    "features": "Features",
+    "pricing": "Pricing",
+    "examples": "Examples",
+    "company": "Company",
+    "about": "About Us",
+    "blog": "Blog",
+    "careers": "Careers",
+    "support": "Support",
+    "help": "Help Center",
+    "documentation": "Documentation",
+    "contact": "Contact Us",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© 2025 Sora AI Video Generator. All rights reserved."
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to your account",
+      "email": "Email",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "submit": "Sign In",
+      "noAccount": "Don't have an account?",
+      "signUpLink": "Sign up"
+    },
+    "signup": {
+      "title": "Create Account",
+      "subtitle": "Start creating amazing videos today",
+      "name": "Full Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "agree": "I agree to the",
+      "terms": "Terms of Service",
+      "and": "and",
+      "privacy": "Privacy Policy",
+      "submit": "Create Account",
+      "hasAccount": "Already have an account?",
+      "signInLink": "Sign in"
+    },
+    "errors": {
+      "invalidEmail": "Invalid email address",
+      "passwordTooShort": "Password must be at least 8 characters",
+      "passwordMismatch": "Passwords do not match",
+      "emailExists": "Email already exists",
+      "invalidCredentials": "Invalid email or password",
+      "serverError": "Server error, please try again later"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back, {name}!",
+    "stats": {
+      "videosCreated": "Videos Created",
+      "storageUsed": "Storage Used",
+      "creditsRemaining": "Credits Remaining",
+      "totalViews": "Total Views"
+    },
+    "recentVideos": {
+      "title": "Recent Videos",
+      "empty": "No videos yet. Start creating!",
+      "createdAt": "Created {date}",
+      "status": {
+        "completed": "Completed",
+        "processing": "Processing",
+        "failed": "Failed"
+      }
+    },
+    "quickActions": {
+      "title": "Quick Actions",
+      "newVideo": "Create New Video",
+      "viewAll": "View All Videos",
+      "upgrade": "Upgrade Plan",
+      "settings": "Settings"
+    },
+    "settings": {
+      "title": "Settings",
+      "profile": {
+        "title": "Profile",
+        "name": "Name",
+        "email": "Email",
+        "avatar": "Avatar",
+        "updateProfile": "Update Profile"
+      },
+      "preferences": {
+        "title": "Preferences",
+        "language": "Language",
+        "theme": "Theme",
+        "notifications": "Notifications",
+        "emailNotifications": "Email Notifications"
+      },
+      "account": {
+        "title": "Account",
+        "plan": "Current Plan",
+        "usage": "Usage",
+        "billing": "Billing",
+        "changePassword": "Change Password",
+        "deleteAccount": "Delete Account"
+      }
+    }
+  }
+}
+
+
+
+
