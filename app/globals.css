@@ -25,6 +25,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* 重置 html 和 body 确保全屏显示 */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 /* 平滑滚动 */
 html {
   scroll-behavior: smooth;
@@ -71,4 +79,12 @@ html {
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient-shift 3s ease infinite;
+}
+
+/* 视频背景保底样式 - 确保完全覆盖容器 */
+section video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
 }

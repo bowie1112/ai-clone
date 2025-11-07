@@ -11,29 +11,28 @@ export default function HeroSection() {
   const t = useTranslations('hero');
   
   return (
-    <section className="relative h-screen w-full flex items-center overflow-hidden" style={{ minHeight: '100vh' }}>
-      {/* Video Background */}
+    <section className="relative min-h-screen w-full overflow-hidden">
+      {/* Video Background - 直接绝对定位，无需额外容器 */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        style={{ 
-          minWidth: '100%', 
-          minHeight: '100%',
-          objectFit: 'cover'
-        }}
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover scale-120"
       >
         <source src="/hero-background.mp4" type="video/mp4" />
       </video>
       
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 w-full h-full bg-black/40" />
-      
+      {/* Dark Overlay with Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
+
+      {/* Bottom Gradient */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/50 to-transparent" />
+
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto w-full px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
+      <div className="relative z-10 flex min-h-screen items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl w-full text-center">
           {/* Main Heading */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight drop-shadow-2xl">
             {t('title')}
