@@ -1,40 +1,19 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+
 export default function Footer() {
-  const footerLinks = {
-    product: [
-      { name: '功能', href: '#features' },
-      { name: '案例', href: '#examples' },
-      { name: '定价', href: '#pricing' },
-      { name: '更新日志', href: '#' },
-    ],
-    resources: [
-      { name: '文档', href: '#' },
-      { name: '教程', href: '#' },
-      { name: 'API', href: '#' },
-      { name: '博客', href: '#' },
-    ],
-    company: [
-      { name: '关于我们', href: '#' },
-      { name: '联系我们', href: '#' },
-      { name: '招聘', href: '#' },
-      { name: '媒体资源', href: '#' },
-    ],
-    support: [
-      { name: 'FAQ', href: '#faq' },
-      { name: '帮助中心', href: '#' },
-      { name: '社区', href: '#' },
-      { name: '反馈', href: '#' },
-    ],
-  };
+  const t = useTranslations('footer');
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-gray-900 text-gray-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* 主要内容 */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-8">
           {/* Logo 和描述 */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center">
                 <svg
                   className="w-5 h-5 text-white"
                   fill="none"
@@ -55,78 +34,103 @@ export default function Footer() {
                   />
                 </svg>
               </div>
-              <span className="text-xl font-bold text-white">Sora 2 AI</span>
+              <span className="text-lg font-semibold text-white">Sora 2 AI</span>
             </div>
-            <p className="text-sm text-gray-400 leading-relaxed">
-              用 AI 创作惊艳视频。OpenAI 的 Sora 2 技术，让每个人都能成为视频创作者。
+            <p className="text-sm text-gray-500 leading-relaxed">
+              {t('description')}
             </p>
           </div>
 
           {/* 产品 */}
           <div>
-            <h3 className="text-white font-semibold mb-4">产品</h3>
+            <h3 className="text-white font-semibold mb-4">{t('product')}</h3>
             <ul className="space-y-3">
-              {footerLinks.product.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-sm hover:text-white transition-colors duration-200"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* 资源 */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">资源</h3>
-            <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-sm hover:text-white transition-colors duration-200"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a href="#features" className="text-sm hover:text-white transition-colors duration-200">
+                  {t('features')}
+                </a>
+              </li>
+              <li>
+                <a href="#pricing" className="text-sm hover:text-white transition-colors duration-200">
+                  {t('pricing')}
+                </a>
+              </li>
+              <li>
+                <a href="#examples" className="text-sm hover:text-white transition-colors duration-200">
+                  {t('examples')}
+                </a>
+              </li>
+              <li>
+                <a href={t('blog')} className="text-sm hover:text-white transition-colors duration-200">
+                  {t('blog')}
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* 公司 */}
           <div>
-            <h3 className="text-white font-semibold mb-4">公司</h3>
+            <h3 className="text-white font-semibold mb-4">{t('company')}</h3>
             <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-sm hover:text-white transition-colors duration-200"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a href="#about" className="text-sm hover:text-white transition-colors duration-200">
+                  {t('about')}
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm hover:text-white transition-colors duration-200">
+                  {t('careers')}
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm hover:text-white transition-colors duration-200">
+                  {t('blog')}
+                </a>
+              </li>
             </ul>
           </div>
 
-          {/* 支持 */}
+          {/* 资源 */}
           <div>
-            <h3 className="text-white font-semibold mb-4">支持</h3>
+            <h3 className="text-white font-semibold mb-4">{t('support')}</h3>
             <ul className="space-y-3">
-              {footerLinks.support.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-sm hover:text-white transition-colors duration-200"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a href="#" className="text-sm hover:text-white transition-colors duration-200">
+                  {t('documentation')}
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm hover:text-white transition-colors duration-200">
+                  {t('help')}
+                </a>
+              </li>
+              <li>
+                <a href="#faq" className="text-sm hover:text-white transition-colors duration-200">
+                  FAQ
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* 联系 */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">{t('legal')}</h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="#" className="text-sm hover:text-white transition-colors duration-200">
+                  {t('privacy')}
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm hover:text-white transition-colors duration-200">
+                  {t('terms')}
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm hover:text-white transition-colors duration-200">
+                  {t('contact')}
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -135,7 +139,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           {/* 版权信息 */}
           <p className="text-sm text-gray-400">
-            © 2024 Sora 2 AI Video Generator. All rights reserved.
+            {t('copyright')}
           </p>
 
           {/* 社交图标 */}
@@ -163,23 +167,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* 法律链接 */}
-        <div className="border-t border-gray-800 mt-8 pt-6 text-center">
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
-            <a href="#" className="hover:text-white transition-colors duration-200">
-              隐私政策
-            </a>
-            <a href="#" className="hover:text-white transition-colors duration-200">
-              服务条款
-            </a>
-            <a href="#" className="hover:text-white transition-colors duration-200">
-              Cookie 设置
-            </a>
-            <a href="#" className="hover:text-white transition-colors duration-200">
-              许可协议
-            </a>
-          </div>
-        </div>
       </div>
     </footer>
   );

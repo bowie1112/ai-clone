@@ -38,116 +38,219 @@
     "title": "Crea Videos Impresionantes con IA",
     "subtitle": "Experimenta la última tecnología Sora 2 de OpenAI - simulación de movimiento físicamente precisa, generación de audio sincronizado y renderizado de escenas realistas.",
     "cta": "Comenzar a Crear",
+    "learnMore": "Saber más",
     "watchDemo": "Ver Demo",
     "description": "Transforma tus ideas en videos de calidad profesional con solo una descripción de texto. No se requieren habilidades de edición."
   },
   "features": {
     "title": "Características Potentes",
     "subtitle": "Todo lo que necesitas para crear videos increíbles",
-    "feature1": {
-      "title": "Generación Impulsada por IA",
-      "description": "Tecnología de IA avanzada crea videos realistas a partir de tus descripciones de texto"
+    "fast": {
+      "title": "Ultrarrápido",
+      "description": "Generación en 30-60 segundos"
     },
-    "feature2": {
-      "title": "Simulación Física",
-      "description": "Simulación de movimiento y física precisa para resultados de aspecto natural"
+    "free": {
+      "title": "100% Gratis",
+      "description": "Sin costos ocultos"
     },
-    "feature3": {
-      "title": "Sincronización de Audio",
-      "description": "Audio generado automáticamente que coincide perfectamente con tu video"
-    },
-    "feature4": {
-      "title": "Calidad 4K",
-      "description": "Exporta tus videos en impresionante resolución 4K"
-    },
-    "feature5": {
-      "title": "Procesamiento Rápido",
-      "description": "Genera videos en minutos, no horas"
-    },
-    "feature6": {
-      "title": "Edición Fácil",
-      "description": "Herramientas simples para refinar y perfeccionar tus creaciones"
+    "ai": {
+      "title": "Impulsado por IA",
+      "description": "Modelo Sora 2 de OpenAI"
     }
   },
   "generator": {
-    "title": "Genera Tu Video",
-    "inputLabel": "Describe tu video",
-    "inputPlaceholder": "Un paisaje montañoso sereno al atardecer con pájaros volando...",
+    "title": "Crea Tu Video Sora 2",
+    "subtitle": "Genera videos de alta calidad desde descripciones de texto",
+    "inputLabel": "Descripción del Video",
+    "inputPlaceholder": "Describe la escena completa del video que quieres crear...",
+    "inputHint": "Sea específico sobre escenas, acciones, estilo y ambiente para obtener mejores resultados",
     "generateButton": "Generar Video",
+    "freeGenerateButton": "Generar Video Gratis",
     "generating": "Generando...",
     "style": "Estilo",
     "duration": "Duración",
     "quality": "Calidad",
-    "advanced": "Configuración Avanzada"
+    "advanced": "Configuración Avanzada",
+    "modelLabel": "Modelo de IA",
+    "modelHint": "Mayor calidad, más créditos",
+    "model": {
+      "sora2": "Sora 2 (10 créditos)",
+      "sora1": "Sora 1 (5 créditos)"
+    },
+    "textToVideo": "Texto a Video",
+    "imageToVideo": "Imagen a Video",
+    "videoUrlLabel": "URL del Video de Entrada",
+    "videoUrlPlaceholder": "https://example.com/input-video.mp4",
+    "videoUrlHint": "Por favor ingrese un enlace de video de acceso público",
+    "freeTrialHint": "Prueba Gratuita: Los usuarios invitados pueden generar 1 video gratis",
+    "signInForMore": "Inicia sesión para más generaciones",
+    "errorNoVideoUrl": "Por favor ingrese una URL de video accesible (para modificación)"
   },
   "useCases": {
-    "title": "Casos de Uso",
-    "subtitle": "Perfecto para cualquier proyecto creativo",
+    "title": "Posibilidades Ilimitadas con Sora 2 AI",
+    "subtitle": "Desde campañas de marketing hasta proyectos personales, el generador de videos sora 2 empodera a creadores de todas las industrias para dar vida a sus ideas",
     "marketing": {
-      "title": "Marketing",
-      "description": "Crea videos promocionales atractivos para tus productos y servicios"
+      "title": "Marketing y Publicidad",
+      "description": "Crea videos promocionales atractivos, demos de productos y contenido para redes sociales con sora2 que capte la atención e impulse las conversiones."
     },
     "education": {
-      "title": "Educación",
-      "description": "Produce contenido educativo y tutoriales con facilidad"
+      "title": "Educación y Capacitación",
+      "description": "Desarrolla contenido educativo, tutoriales y materiales de capacitación que hagan que los temas complejos sean fáciles de entender."
     },
-    "entertainment": {
-      "title": "Entretenimiento",
-      "description": "Da vida a tus historias y conceptos creativos"
+    "creative": {
+      "title": "Contenido Creativo",
+      "description": "Da vida a tu visión artística con videos generados por IA para música, arte y narración creativa."
     },
-    "social": {
-      "title": "Redes Sociales",
-      "description": "Genera contenido viral para tus canales sociales"
+    "ecommerce": {
+      "title": "Comercio Electrónico",
+      "description": "Muestra productos con videos dinámicos que resalten características y beneficios para impulsar las ventas."
+    },
+    "business": {
+      "title": "Presentaciones de Negocios",
+      "description": "Transforma presentaciones aburridas en contenido de video atractivo que cautive a tu audiencia."
+    },
+    "personal": {
+      "title": "Proyectos Personales",
+      "description": "Crea videos memorables para ocasiones especiales, marca personal o simplemente por diversión."
+    },
+    "gaming": {
+      "title": "Contenido de Juegos",
+      "description": "Genera tráilers de juegos, cinemáticas y contenido promocional para tus proyectos de juegos."
+    },
+    "music": {
+      "title": "Videos Musicales",
+      "description": "Crea acompañamientos visuales impresionantes para tu música con movimientos labiales perfectamente sincronizados."
+    }
+  },
+  "showcase": {
+    "title": "Mira Lo Que Es Posible con el Generador de Videos Sora 2",
+    "subtitle": "Explora increíbles videos de sora 2 ai creados por nuestra comunidad usando prompts de texto simples con movimiento físicamente preciso",
+    "placeholder": "Reemplazar con recursos oficiales de Sora",
+    "videos": {
+      "marketing": {
+        "category": "Marketing",
+        "thumbnail": "Escena nocturna de la ciudad con persona",
+        "prompt": "Un video de marketing profesional mostrando un producto en un entorno urbano nocturno"
+      },
+      "documentary": {
+        "category": "Documental",
+        "thumbnail": "Escena documental",
+        "prompt": "Una toma estilo documental cinematográfico capturando emoción humana auténtica y narración"
+      },
+      "education": {
+        "category": "Educación",
+        "thumbnail": "Contenido educativo",
+        "prompt": "Un video educativo atractivo que demuestra conceptos complejos de manera clara y visual"
+      },
+      "fashion": {
+        "category": "Moda",
+        "thumbnail": "Fotografía de moda",
+        "prompt": "Un video de moda elegante con movimientos elegantes e iluminación profesional"
+      },
+      "tutorial": {
+        "category": "Tutorial",
+        "thumbnail": "Escena de tutorial",
+        "prompt": "Un video tutorial paso a paso con demostraciones claras y calidad profesional"
+      },
+      "entertainment": {
+        "category": "Entretenimiento",
+        "thumbnail": "Escena de entretenimiento",
+        "prompt": "Un video de entretenimiento divertido y atractivo con acción dinámica y visuales vibrantes"
+      }
+    },
+    "cta": {
+      "description": "¿Listo para crear tu propio contenido de video sora 2 increíble?",
+      "button": "Comienza a Crear con Sora 2 AI"
     }
   },
   "testimonials": {
-    "title": "Lo Que Dicen Nuestros Usuarios",
-    "subtitle": "Únete a miles de creadores satisfechos",
-    "testimonial1": {
-      "text": "Esta herramienta ha revolucionado cómo creo contenido. ¡La calidad es increíble!",
-      "author": "Sarah Chen",
-      "role": "Creadora de Contenido"
-    },
-    "testimonial2": {
-      "text": "Puedo producir videos profesionales en minutos. Es un cambio de juego para mi negocio.",
-      "author": "Michael Rodriguez",
-      "role": "Director de Marketing"
-    },
-    "testimonial3": {
-      "text": "La IA entiende exactamente lo que quiero. Los resultados siempre son impresionantes.",
-      "author": "Yuki Tanaka",
-      "role": "Cineasta"
+    "title": "Amado por Creadores de Todo el Mundo",
+    "subtitle": "Únete a miles de usuarios satisfechos creando contenido de video sora 2 increíble con la tecnología de IA avanzada de OpenAI",
+    "items": {
+      "0": {
+        "text": "La plataforma sora 2 ai ha revolucionado nuestro proceso de creación de contenido. Lo que solía tomar días con la producción de video tradicional ahora toma minutos. ¡La calidad de video físicamente precisa es increíble!",
+        "name": "Sarah Chen",
+        "role": "Directora de Marketing en TechStart Inc."
+      },
+      "1": {
+        "text": "Como creador de contenido, el generador de videos sora 2 ha sido un cambio de juego. La función de audio sincronizado es tan realista que mi audiencia no puede notar la diferencia con metraje real.",
+        "name": "Michael Rodriguez",
+        "role": "Creador de Contenido en YouTube"
+      },
+      "2": {
+        "text": "Usamos sora2 de OpenAI para crear videos educativos para nuestros cursos en línea. La IA entiende temas complejos y los visualiza perfectamente con movimiento realista.",
+        "name": "Emily Watson",
+        "role": "Especialista en Educación en EduTech Solutions"
+      },
+      "3": {
+        "text": "Las posibilidades creativas con sora 2 ai son infinitas. Entiende conceptos artísticos y los da vida con movimiento físicamente preciso de maneras que nunca imaginé posibles.",
+        "name": "David Kim",
+        "role": "Director Creativo en Design Studio X"
+      },
+      "4": {
+        "text": "Nunca pensé que podría pagar marketing de video profesional. El generador de videos sora 2 hace posible que pequeñas empresas como la mía compitan con los grandes jugadores.",
+        "name": "Lisa Thompson",
+        "role": "Propietaria de Pequeña Empresa en Thompson's Bakery"
+      },
+      "5": {
+        "text": "Las capacidades de voz sincronizada y efectos de sonido de sora2 son fenomenales. Hemos creado videos musicales con audio realista que parecen tener presupuestos de un millón de dólares.",
+        "name": "James Park",
+        "role": "Productor Musical en Harmony Records"
+      }
     }
   },
   "faq": {
     "title": "Preguntas Frecuentes",
-    "subtitle": "¿Tienes preguntas? Tenemos respuestas",
-    "question1": {
-      "q": "¿Cuánto tiempo tarda en generarse un video?",
-      "a": "La mayoría de los videos se generan en 2-5 minutos, dependiendo de la longitud y complejidad."
-    },
-    "question2": {
-      "q": "¿Qué formatos de video son compatibles?",
-      "a": "Admitimos formatos MP4, MOV y WebM con varias opciones de resolución."
-    },
-    "question3": {
-      "q": "¿Puedo editar los videos generados?",
-      "a": "Sí, puedes hacer ajustes y refinamientos usando nuestro editor integrado."
-    },
-    "question4": {
-      "q": "¿Hay una prueba gratuita?",
-      "a": "Sí, ofrecemos una prueba gratuita con 3 generaciones de video para comenzar."
-    },
-    "question5": {
-      "q": "¿Qué idiomas son compatibles?",
-      "a": "Admitimos inglés, chino, japonés y español tanto para entrada como para salida."
+    "subtitle": "Todo lo que necesitas saber sobre el generador de videos sora 2 ai",
+    "items": {
+      "0": {
+        "question": "¿Qué es el Generador de Videos Sora 2 AI?",
+        "answer": "El Generador de Videos Sora 2 AI es una herramienta avanzada impulsada por IA desarrollada por OpenAI que crea videos de alta calidad a partir de descripciones de texto. Utiliza tecnología de vanguardia para generar videos realistas con movimiento físicamente preciso, audio sincronizado y calidad cinematográfica. Simplemente describe lo que quieres ver, y Sora 2 da vida a tus ideas en forma de video."
+      },
+      "1": {
+        "question": "¿Realmente es gratis de usar?",
+        "answer": "¡Sí! Nuestro Generador de Videos Sora 2 AI ofrece un nivel gratuito que te permite crear videos sin costos ocultos. Creemos en hacer que la generación de videos con IA sea accesible para todos. Si bien hay funciones premium disponibles para usuarios avanzados, puedes comenzar a crear videos increíbles de inmediato sin ingresar información de pago."
+      },
+      "2": {
+        "question": "¿Necesito crear una cuenta?",
+        "answer": "Crear una cuenta es opcional pero recomendado. Con una cuenta, puedes guardar tus videos generados, acceder a tu historial de creación y disfrutar de funciones adicionales como tiempos de generación de video más largos y salidas de mayor calidad. Sin embargo, puedes probar las funciones básicas sin registrarte para ver qué puede hacer Sora 2."
+      },
+      "3": {
+        "question": "¿Qué calidad y longitud de video puedo generar?",
+        "answer": "Sora 2 puede generar videos en varios niveles de calidad, desde definición estándar hasta salidas de alta definición. La longitud del video depende de tu nivel de suscripción: los usuarios gratuitos pueden crear videos de hasta 15 segundos, mientras que los usuarios premium pueden generar videos de hasta 60 segundos o más. Todos los videos presentan movimiento realista, iluminación adecuada y movimientos físicamente precisos."
+      },
+      "4": {
+        "question": "¿Cuánto tiempo tarda en generarse un video?",
+        "answer": "El tiempo de generación varía según la longitud y complejidad del video, pero la mayoría de los videos están listos en 30-60 segundos. Los videos más cortos (5-15 segundos) normalmente se generan más rápido, mientras que los videos más largos y complejos pueden tardar hasta 2 minutos. Nuestra tecnología de IA avanzada asegura que la calidad vale la pena esperar, ofreciendo resultados de nivel profesional cada vez."
+      },
+      "5": {
+        "question": "¿Puedo usar los videos generados comercialmente?",
+        "answer": "¡Sí! Los videos creados con el Generador de Videos Sora 2 AI pueden usarse con fines comerciales. Conservas todos los derechos para usar tus videos generados en tu negocio, campañas de marketing, redes sociales o cualquier otra aplicación comercial. Creemos que tu creatividad debe trabajar para ti sin limitaciones."
+      },
+      "6": {
+        "question": "¿Qué hace diferente a Sora 2 de otros generadores de videos con IA?",
+        "answer": "Sora 2 se destaca con su simulación de movimiento físicamente precisa, generación de audio sincronizado y comprensión de la física del mundo real. A diferencia de otros generadores, Sora 2 crea videos con interacciones realistas de objetos, iluminación y sombras adecuadas, y movimientos naturales. También sobresale en comprender prompts complejos y mantener la consistencia a lo largo de videos más largos."
+      },
+      "7": {
+        "question": "¿Puedo editar o descargar los videos generados?",
+        "answer": "¡Por supuesto! Una vez que tu video se genera, puedes descargarlo en varios formatos (MP4, MOV, etc.) para usarlo en tus proyectos. Si bien Sora 2 se enfoca en la generación en lugar de la edición, puedes importar fácilmente los videos descargados en cualquier software de edición de video para personalización adicional, agregar superposiciones de texto, música o combinar múltiples clips."
+      },
+      "8": {
+        "question": "¿Qué tipos de prompts funcionan mejor?",
+        "answer": "Los mejores prompts son detallados y específicos. Incluye información sobre la escena (ubicación, hora del día, clima), sujetos (personas, objetos, animales), acciones (qué está sucediendo), movimiento de cámara (zoom, paneo, estático) y estilo (cinematográfico, documental, animado). Por ejemplo: \"Una toma cinematográfica de un golden retriever corriendo por un prado iluminado por el sol al atardecer, la cámara siguiendo con movimiento de seguimiento suave\" funciona mejor que solo \"perro corriendo\"."
+      },
+      "9": {
+        "question": "¿Hay un límite de cuántos videos puedo generar?",
+        "answer": "Los usuarios gratuitos pueden generar hasta 10 videos por día, lo cual es perfecto para explorar y experimentar con la tecnología. Los suscriptores premium disfrutan de generación de videos ilimitada, procesamiento prioritario y acceso a funciones avanzadas. Todos los usuarios pueden guardar sus generaciones favoritas y volver a ellas en cualquier momento."
+      }
     }
   },
   "cta": {
-    "title": "¿Listo para Crear?",
-    "subtitle": "Únete a miles de creadores que usan IA para dar vida a sus ideas",
-    "button": "Comenzar Ahora",
-    "noCredit": "No se requiere tarjeta de crédito"
+    "title": "¿Listo para Crear Videos Impresionantes con Sora 2 AI?",
+    "subtitle": "No te pierdas el futuro de la creación de contenido. Comienza ahora y ve tus ideas cobrar vida en minutos.",
+    "primaryButton": "Comenzar a Crear Ahora",
+    "secondaryButton": "Ver Ejemplos",
+    "footnote": "No se requiere tarjeta de crédito • Gratis para comenzar • Cancela en cualquier momento"
   },
   "footer": {
     "description": "Crea videos impresionantes con tecnología impulsada por IA",
@@ -444,6 +547,10 @@
     }
   }
 }
+
+
+
+
 
 
 

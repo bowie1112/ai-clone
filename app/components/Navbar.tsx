@@ -6,7 +6,8 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import Link from 'next/link';
 import { authClient } from '@/lib/auth-client';
 import LanguageSwitcher from './LanguageSwitcher';
 
@@ -15,6 +16,7 @@ export default function Navbar() {
   const { data: session } = authClient.useSession();
   const googleEnabled = process.env.NEXT_PUBLIC_GOOGLE_LOGIN_ENABLED === '1';
   const t = useTranslations('nav');
+  const locale = useLocale();
   const syncedUserId = useRef<string | null>(null);
 
   useEffect(() => {
@@ -55,17 +57,21 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/80 backdrop-blur-lg shadow-sm'
+          ? 'bg-white border-b border-gray-200'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 sm:h-20">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+            <div className={`w-8 h-8 rounded-lg flex items-center justify-center transition-colors ${
+              isScrolled ? 'bg-gray-900' : 'bg-white'
+            }`}>
               <svg
-                className="w-5 h-5 text-white"
+                className={`w-5 h-5 transition-colors ${
+                  isScrolled ? 'text-white' : 'text-gray-900'
+                }`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -84,7 +90,9 @@ export default function Navbar() {
                 />
               </svg>
             </div>
-            <span className="text-xl font-bold text-gray-900">
+            <span className={`text-lg font-semibold transition-colors ${
+              isScrolled ? 'text-gray-900' : 'text-white'
+            }`}>
               Sora 2 AI
             </span>
           </div>
@@ -93,36 +101,54 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             <a
               href="#features"
-              className="text-gray-600 hover:text-gray-900 transition-colors font-medium"
+              className={`text-sm transition-colors ${
+                isScrolled 
+                  ? 'text-gray-600 hover:text-gray-900' 
+                  : 'text-white/90 hover:text-white'
+              }`}
             >
               {t('features')}
             </a>
-            <a
-              href="#pricing"
-              className="text-gray-600 hover:text-gray-900 transition-colors font-medium"
+            <Link
+              href={`/${locale}/pricing`}
+              className={`text-sm transition-colors ${
+                isScrolled 
+                  ? 'text-gray-600 hover:text-gray-900' 
+                  : 'text-white/90 hover:text-white'
+              }`}
             >
               {t('pricing')}
-            </a>
+            </Link>
             <a
               href="#about"
-              className="text-gray-600 hover:text-gray-900 transition-colors font-medium"
+              className={`text-sm transition-colors ${
+                isScrolled 
+                  ? 'text-gray-600 hover:text-gray-900' 
+                  : 'text-white/90 hover:text-white'
+              }`}
             >
               {t('about')}
             </a>
           </div>
 
           {/* Auth Buttons & Language Switcher */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             <LanguageSwitcher />
             
             {session?.user ? (
               <>
-                <span className="hidden sm:inline text-gray-700">{session.user.email ?? t('login')}</span>
+                <span className={`hidden sm:inline text-sm transition-colors ${
+                  isScrolled ? 'text-gray-600' : 'text-white/90'
+                }`}>{session.user.email ?? t('login')}</span>
                 <button
                   onClick={async () => {
                     await authClient.signOut();
                   }}
-                  className="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium hover:bg-gray-200 transition-all duration-300"
+                  className={`text-sm px-4 py-2 transition-colors ${
+                    isScrolled 
+                      ? 'text-gray-600 hover:text-gray-900' 
+                      : 'text-white/90 hover:text-white'
+                  }`}
                 >
                   {t('logout')}
                 </button>
@@ -132,14 +158,18 @@ export default function Navbar() {
                 onClick={async () => {
                   await authClient.signIn.social({ provider: 'google', callbackURL: '/' });
                 }}
-                className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2.5 rounded-full font-medium hover:shadow-lg hover:scale-105 transition-all duration-300"
+                className={`text-sm px-4 py-2 rounded-lg font-medium transition-colors ${
+                  isScrolled
+                    ? 'bg-gray-900 text-white hover:bg-gray-800'
+                    : 'bg-white text-gray-900 hover:bg-gray-100'
+                }`}
               >
                 {t('login')}
               </button>
             ) : (
               <button
                 disabled
-                className="bg-gray-200 text-gray-500 px-6 py-2.5 rounded-full font-medium cursor-not-allowed"
+                className="bg-gray-200 text-gray-400 text-sm px-4 py-2 rounded-lg font-medium cursor-not-allowed"
                 title={t('login')}
               >
                 {t('login')}

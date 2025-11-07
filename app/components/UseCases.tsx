@@ -1,4 +1,10 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+
 export default function UseCases() {
+  const t = useTranslations('useCases');
+  
   const useCases = [
     {
       icon: (
@@ -11,8 +17,8 @@ export default function UseCases() {
           />
         </svg>
       ),
-      title: 'Marketing & Advertising',
-      description: 'Create engaging promotional videos, product demos, and social media content with sora2 that captures attention and drives conversions.',
+      titleKey: 'marketing.title',
+      descKey: 'marketing.description',
     },
     {
       icon: (
@@ -31,8 +37,8 @@ export default function UseCases() {
           />
         </svg>
       ),
-      title: 'Education & Training',
-      description: 'Develop educational content, tutorials, and training materials that make complex topics easy to understand.',
+      titleKey: 'education.title',
+      descKey: 'education.description',
     },
     {
       icon: (
@@ -45,8 +51,8 @@ export default function UseCases() {
           />
         </svg>
       ),
-      title: 'Creative Content',
-      description: 'Bring your artistic vision to life with AI-generated videos for music, art, and creative storytelling.',
+      titleKey: 'creative.title',
+      descKey: 'creative.description',
     },
     {
       icon: (
@@ -59,8 +65,8 @@ export default function UseCases() {
           />
         </svg>
       ),
-      title: 'E-commerce',
-      description: 'Showcase products with dynamic videos that highlight features and benefits to boost sales.',
+      titleKey: 'ecommerce.title',
+      descKey: 'ecommerce.description',
     },
     {
       icon: (
@@ -73,8 +79,8 @@ export default function UseCases() {
           />
         </svg>
       ),
-      title: 'Business Presentations',
-      description: 'Transform boring presentations into engaging video content that captivates your audience.',
+      titleKey: 'business.title',
+      descKey: 'business.description',
     },
     {
       icon: (
@@ -87,8 +93,8 @@ export default function UseCases() {
           />
         </svg>
       ),
-      title: 'Personal Projects',
-      description: 'Create memorable videos for special occasions, personal branding, or just for fun.',
+      titleKey: 'personal.title',
+      descKey: 'personal.description',
     },
     {
       icon: (
@@ -101,8 +107,8 @@ export default function UseCases() {
           />
         </svg>
       ),
-      title: 'Gaming Content',
-      description: 'Generate game trailers, cutscenes, and promotional content for your gaming projects.',
+      titleKey: 'gaming.title',
+      descKey: 'gaming.description',
     },
     {
       icon: (
@@ -115,23 +121,21 @@ export default function UseCases() {
           />
         </svg>
       ),
-      title: 'Music Videos',
-      description: 'Create stunning visual accompaniments for your music with perfectly synced lip movements.',
+      titleKey: 'music.title',
+      descKey: 'music.description',
     },
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50" id="features">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white" id="features">
       <div className="max-w-7xl mx-auto">
         {/* 标题部分 */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            Unlimited Possibilities with Sora 2 AI
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            {t('title')}
           </h2>
-          <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-            From marketing campaigns to personal projects, the sora 2 video generator empowers
-            creators across all industries to bring their ideas to life with OpenAI's advanced
-            technology
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            {t('subtitle')}
           </p>
         </div>
 
@@ -140,16 +144,16 @@ export default function UseCases() {
           {useCases.map((useCase, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+              className="bg-white border border-gray-200 rounded-lg p-6 hover:border-gray-300 transition-colors"
             >
               <div className="text-gray-900 mb-4">
                 {useCase.icon}
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
-                {useCase.title}
+              <h3 className="text-base font-semibold text-gray-900 mb-2">
+                {t(useCase.titleKey)}
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                {useCase.description}
+                {t(useCase.descKey)}
               </p>
             </div>
           ))}

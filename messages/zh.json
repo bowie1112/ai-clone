@@ -38,116 +38,219 @@
     "title": "用 AI 创作惊艳视频",
     "subtitle": "体验 OpenAI 最新的 Sora 2 技术 - 物理精确的运动模拟、同步音频生成、逼真的场景渲染。",
     "cta": "开始创作",
+    "learnMore": "了解更多",
     "watchDemo": "观看演示",
     "description": "只需输入文字描述，即可将您的创意转化为专业品质的视频。无需编辑技能。"
   },
   "features": {
     "title": "强大功能",
     "subtitle": "创作精彩视频所需的一切",
-    "feature1": {
-      "title": "AI 驱动生成",
-      "description": "先进的 AI 技术根据您的文字描述创建逼真的视频"
+    "fast": {
+      "title": "闪电速度",
+      "description": "30-60 秒极速生成"
     },
-    "feature2": {
-      "title": "物理模拟",
-      "description": "精确的运动和物理模拟，呈现自然逼真的效果"
+    "free": {
+      "title": "100% 免费",
+      "description": "无隐藏费用"
     },
-    "feature3": {
-      "title": "音频同步",
-      "description": "自动生成与视频完美匹配的音频"
-    },
-    "feature4": {
-      "title": "4K 画质",
-      "description": "以令人惊叹的 4K 分辨率导出您的视频"
-    },
-    "feature5": {
-      "title": "快速处理",
-      "description": "几分钟而非几小时即可生成视频"
-    },
-    "feature6": {
-      "title": "轻松编辑",
-      "description": "简单的工具来完善您的创作"
+    "ai": {
+      "title": "AI 驱动",
+      "description": "OpenAI Sora 2 模型"
     }
   },
   "generator": {
-    "title": "生成您的视频",
-    "inputLabel": "描述您的视频",
-    "inputPlaceholder": "日落时分宁静的山景，鸟儿飞翔...",
+    "title": "创建您的 Sora 2 视频",
+    "subtitle": "从文本描述生成高质量视频",
+    "inputLabel": "视频描述",
+    "inputPlaceholder": "描述您想要创建的完整视频场景...",
+    "inputHint": "详细描述场景、动作、风格和情绪以获得最佳效果",
     "generateButton": "生成视频",
+    "freeGenerateButton": "免费生成视频",
     "generating": "生成中...",
     "style": "风格",
     "duration": "时长",
     "quality": "画质",
-    "advanced": "高级设置"
+    "advanced": "高级设置",
+    "modelLabel": "AI 模型",
+    "modelHint": "更高质量，更多积分",
+    "model": {
+      "sora2": "Sora 2 (10 积分)",
+      "sora1": "Sora 1 (5 积分)"
+    },
+    "textToVideo": "文本生成视频",
+    "imageToVideo": "图片生成视频",
+    "videoUrlLabel": "输入视频 URL",
+    "videoUrlPlaceholder": "https://example.com/input-video.mp4",
+    "videoUrlHint": "请输入一个公网可访问的视频链接",
+    "freeTrialHint": "免费试用：未登录用户可免费生成 1 次视频",
+    "signInForMore": "登录获取更多次数",
+    "errorNoVideoUrl": "请输入可访问的视频 URL（用于修改）"
   },
   "useCases": {
-    "title": "使用场景",
-    "subtitle": "适合任何创意项目",
+    "title": "Sora 2 AI 的无限可能",
+    "subtitle": "从营销活动到个人项目，sora 2 视频生成器赋能各行各业的创作者将创意变为现实",
     "marketing": {
-      "title": "营销推广",
-      "description": "为您的产品和服务创建引人入胜的宣传视频"
+      "title": "营销与广告",
+      "description": "使用 sora2 创建引人入胜的促销视频、产品演示和社交媒体内容，吸引注意力并提升转化率。"
     },
     "education": {
-      "title": "教育培训",
-      "description": "轻松制作教育内容和教程"
+      "title": "教育与培训",
+      "description": "开发教育内容、教程和培训材料，使复杂主题易于理解。"
     },
-    "entertainment": {
-      "title": "娱乐内容",
-      "description": "将您的创意故事和概念变为现实"
+    "creative": {
+      "title": "创意内容",
+      "description": "通过 AI 生成的音乐、艺术和创意叙事视频，将您的艺术愿景变为现实。"
     },
-    "social": {
-      "title": "社交媒体",
-      "description": "为您的社交渠道生成热门内容"
+    "ecommerce": {
+      "title": "电子商务",
+      "description": "用突出特性和优势的动态视频展示产品，提升销量。"
+    },
+    "business": {
+      "title": "商业演示",
+      "description": "将枯燥的演示转变为吸引观众的引人入胜的视频内容。"
+    },
+    "personal": {
+      "title": "个人项目",
+      "description": "为特殊场合、个人品牌或娱乐创建难忘的视频。"
+    },
+    "gaming": {
+      "title": "游戏内容",
+      "description": "为您的游戏项目生成游戏预告片、过场动画和宣传内容。"
+    },
+    "music": {
+      "title": "音乐视频",
+      "description": "为您的音乐创建令人惊叹的视觉伴奏，完美同步的唇型动作。"
+    }
+  },
+  "showcase": {
+    "title": "看看 Sora 2 视频生成器的能力",
+    "subtitle": "探索我们社区使用简单文本提示创建的精彩 sora 2 ai 视频，具有物理精确的运动",
+    "placeholder": "替换为 Sora 官网素材",
+    "videos": {
+      "marketing": {
+        "category": "营销",
+        "thumbnail": "城市夜景场景",
+        "prompt": "展示产品的专业营销视频，在夜晚的城市环境中"
+      },
+      "documentary": {
+        "category": "纪录片",
+        "thumbnail": "纪录片场景",
+        "prompt": "捕捉真实人类情感和叙事的电影级纪录片镜头"
+      },
+      "education": {
+        "category": "教育",
+        "thumbnail": "教育内容",
+        "prompt": "以清晰、直观的方式演示复杂概念的引人入胜的教育视频"
+      },
+      "fashion": {
+        "category": "时尚",
+        "thumbnail": "时尚摄影",
+        "prompt": "具有优雅动作和专业照明的时尚视频"
+      },
+      "tutorial": {
+        "category": "教程",
+        "thumbnail": "教程场景",
+        "prompt": "具有清晰演示和专业品质的分步教程视频"
+      },
+      "entertainment": {
+        "category": "娱乐",
+        "thumbnail": "娱乐场景",
+        "prompt": "具有动态动作和生动视觉效果的有趣引人入胜的娱乐视频"
+      }
+    },
+    "cta": {
+      "description": "准备创建自己的精彩 sora 2 视频内容了吗？",
+      "button": "开始使用 Sora 2 AI 创作"
     }
   },
   "testimonials": {
-    "title": "用户评价",
-    "subtitle": "加入数千名满意的创作者",
-    "testimonial1": {
-      "text": "这个工具彻底改变了我创作内容的方式。质量令人难以置信！",
-      "author": "Sarah Chen",
-      "role": "内容创作者"
-    },
-    "testimonial2": {
-      "text": "我可以在几分钟内制作出专业视频。这对我的业务来说是一个改变游戏规则的工具。",
-      "author": "Michael Rodriguez",
-      "role": "营销总监"
-    },
-    "testimonial3": {
-      "text": "AI 完全理解我的需求。结果总是令人印象深刻。",
-      "author": "Yuki Tanaka",
-      "role": "电影制作人"
+    "title": "深受全球创作者喜爱",
+    "subtitle": "加入数千名满意用户，使用 OpenAI 的先进 AI 技术创作精彩 sora 2 视频内容",
+    "items": {
+      "0": {
+        "text": "sora 2 ai 平台彻底改变了我们的内容创作流程。传统视频制作需要几天的时间，现在只需几分钟。物理精确的视频质量令人难以置信！",
+        "name": "Sarah Chen",
+        "role": "TechStart Inc. 营销总监"
+      },
+      "1": {
+        "text": "作为内容创作者，sora 2 视频生成器改变了游戏规则。同步音频功能非常逼真，我的观众无法分辨与真实镜头的区别。",
+        "name": "Michael Rodriguez",
+        "role": "YouTube 内容创作者"
+      },
+      "2": {
+        "text": "我们使用 OpenAI 的 sora2 为在线课程创建教育视频。AI 理解复杂主题，并通过逼真的运动完美地将其可视化。",
+        "name": "Emily Watson",
+        "role": "EduTech Solutions 教育专家"
+      },
+      "3": {
+        "text": "sora 2 ai 的创意可能性是无穷的。它理解艺术概念，并以我从未想象过的方式通过物理精确的运动将其变为现实。",
+        "name": "David Kim",
+        "role": "Design Studio X 创意总监"
+      },
+      "4": {
+        "text": "我从未想过我能负担得起专业的视频营销。sora 2 视频生成器让像我这样的小企业有可能与大企业竞争。",
+        "name": "Lisa Thompson",
+        "role": "Thompson's Bakery 小企业主"
+      },
+      "5": {
+        "text": "sora2 的同步语音和音效功能非常出色。我们创建的音乐视频具有逼真的音频，看起来像是拥有百万美元预算的制作。",
+        "name": "James Park",
+        "role": "Harmony Records 音乐制作人"
+      }
     }
   },
   "faq": {
     "title": "常见问题",
-    "subtitle": "有疑问？我们有答案",
-    "question1": {
-      "q": "生成视频需要多长时间？",
-      "a": "大多数视频在 2-5 分钟内生成，具体取决于长度和复杂度。"
-    },
-    "question2": {
-      "q": "支持哪些视频格式？",
-      "a": "我们支持 MP4、MOV 和 WebM 格式，并提供多种分辨率选项。"
-    },
-    "question3": {
-      "q": "我可以编辑生成的视频吗？",
-      "a": "可以，您可以使用我们的内置编辑器进行调整和完善。"
-    },
-    "question4": {
-      "q": "有免费试用吗？",
-      "a": "是的，我们提供 3 次视频生成的免费试用，帮助您开始使用。"
-    },
-    "question5": {
-      "q": "支持哪些语言？",
-      "a": "我们支持英语、中文、日语和西班牙语的输入和输出。"
+    "subtitle": "关于 sora 2 ai 视频生成器您需要了解的一切",
+    "items": {
+      "0": {
+        "question": "什么是 Sora 2 AI 视频生成器？",
+        "answer": "Sora 2 AI 视频生成器是由 OpenAI 开发的先进 AI 工具，可以从文本描述创建高质量视频。它使用尖端技术生成具有物理精确运动、同步音频和电影级质量的逼真视频。只需描述您想看到的内容，Sora 2 就能以视频形式将您的想法变为现实。"
+      },
+      "1": {
+        "question": "真的可以免费使用吗？",
+        "answer": "是的！我们的 Sora 2 AI 视频生成器提供免费套餐，让您无需任何隐藏费用即可创建视频。我们相信让每个人都能使用 AI 视频生成。虽然有适合高级用户的高级功能，但您可以立即开始创建精彩视频，无需输入任何付款信息。"
+      },
+      "2": {
+        "question": "我需要创建账户吗？",
+        "answer": "创建账户是可选的，但建议创建。使用账户，您可以保存生成的视频、访问创作历史，并享受更长的视频生成时间和更高质量输出等附加功能。但是，您可以在不注册的情况下尝试基本功能，看看 Sora 2 能做什么。"
+      },
+      "3": {
+        "question": "我可以生成什么视频质量和长度？",
+        "answer": "Sora 2 可以生成各种质量级别的视频，从标清到高清输出。视频长度取决于您的订阅等级 - 免费用户可以创建最多 15 秒的视频，而高级用户可以生成最多 60 秒或更长的视频。所有视频都具有逼真的运动、适当的照明和物理精确的动作。"
+      },
+      "4": {
+        "question": "生成视频需要多长时间？",
+        "answer": "生成时间因视频长度和复杂性而异，但大多数视频在 30-60 秒内准备就绪。较短的视频（5-15 秒）通常生成得更快，而较长、更复杂的视频可能需要 2 分钟。我们的先进 AI 技术确保质量值得等待，每次都能提供专业级结果。"
+      },
+      "5": {
+        "question": "我可以将生成的视频用于商业用途吗？",
+        "answer": "可以！使用 Sora 2 AI 视频生成器创建的视频可用于商业目的。您保留在业务、营销活动、社交媒体或任何其他商业应用中使用生成视频的全部权利。我们相信您的创造力应该为您服务，没有限制。"
+      },
+      "6": {
+        "question": "Sora 2 与其他 AI 视频生成器有何不同？",
+        "answer": "Sora 2 以其物理精确的运动模拟、同步音频生成和对现实世界物理的理解而脱颖而出。与其他生成器不同，Sora 2 创建具有逼真物体交互、适当照明和阴影以及自然动作的视频。它还擅长理解复杂提示并在较长视频中保持一致性。"
+      },
+      "7": {
+        "question": "我可以编辑或下载生成的视频吗？",
+        "answer": "当然可以！视频生成后，您可以以各种格式（MP4、MOV 等）下载用于您的项目。虽然 Sora 2 专注于生成而不是编辑，但您可以轻松地将下载的视频导入任何视频编辑软件进行进一步自定义、添加文字覆盖、音乐或组合多个片段。"
+      },
+      "8": {
+        "question": "什么类型的提示效果最好？",
+        "answer": "最佳提示是详细和具体的。包括关于场景（位置、时间、天气）、主体（人物、物体、动物）、动作（发生了什么）、相机运动（缩放、平移、静态）和风格（电影、纪录片、动画）的信息。例如：「在日落时分，金毛寻回犬在阳光普照的草地上奔跑的电影镜头，相机以平滑的跟踪运动跟随」比只说「狗跑步」效果要好。"
+      },
+      "9": {
+        "question": "我可以生成多少视频有限制吗？",
+        "answer": "免费用户每天可以生成最多 10 个视频，非常适合探索和实验该技术。高级订阅者享有无限视频生成、优先处理和访问高级功能。所有用户都可以保存他们喜欢的生成内容，随时回来查看。"
+      }
     }
   },
   "cta": {
-    "title": "准备开始创作了吗？",
-    "subtitle": "加入数千名使用 AI 将创意变为现实的创作者",
-    "button": "立即开始",
-    "noCredit": "无需信用卡"
+    "title": "准备用 Sora 2 AI 创作惊艳视频？",
+    "subtitle": "不要错过内容创作的未来。立即开始，几分钟内就能看到你的创意变为现实。",
+    "primaryButton": "立即开始创作",
+    "secondaryButton": "查看示例",
+    "footnote": "无需信用卡 • 免费开始 • 随时取消"
   },
   "footer": {
     "description": "使用 AI 技术创作惊艳视频",
@@ -274,6 +377,47 @@
       "cancelButton": "稍后再说",
       "hasAccount": "已有账户？",
       "signInLink": "立即登录"
+    }
+  },
+  "payment": {
+    "buyNow": "立即购买",
+    "subscribe": "订阅",
+    "processing": "处理中...",
+    "contactSales": "联系销售",
+    "signInToSubscribe": "登录后订阅",
+    "mostPopular": "最受欢迎",
+    "customPricing": "定制定价",
+    "free": "免费",
+    "year": "年",
+    "month": "月",
+    "save": "节省 {percent}%",
+    "billedAnnually": "按年计费为 {amount}",
+    "unlimitedCredits": "无限积分",
+    "credits": "积分",
+    "paymentHistory": "支付历史",
+    "noPayments": "暂无支付记录",
+    "noPaymentsDescription": "您还没有进行任何购买。",
+    "date": "日期",
+    "product": "产品",
+    "amount": "金额",
+    "status": "状态",
+    "success": {
+      "title": "支付成功！",
+      "description": "感谢您的购买。积分已添加到您的账户。",
+      "processingNote": "您的支付正在处理中。积分将在几分钟内到账。",
+      "goToDashboard": "前往控制台",
+      "backToHome": "返回首页",
+      "needHelp": "需要帮助？",
+      "contactSupport": "联系客服"
+    },
+    "cancel": {
+      "title": "支付已取消",
+      "description": "您的支付已取消。未产生任何费用。",
+      "note": "如果您在结账过程中遇到任何问题，请重试或联系我们的客服团队。",
+      "tryAgain": "重试",
+      "backToHome": "返回首页",
+      "questions": "有疑问？",
+      "contactSupport": "联系客服"
     }
   },
   "pricing": {
@@ -444,6 +588,10 @@
     }
   }
 }
+
+
+
+
 
 
 

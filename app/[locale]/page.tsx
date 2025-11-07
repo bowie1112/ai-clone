@@ -20,8 +20,8 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
-        <Features />
         <VideoGenerator />
+        <Features />
         <UseCases />
         <VideoShowcase />
         <Testimonials />
@@ -32,6 +32,9 @@ export default function Home() {
     </div>
   );
 }
+
+
+
 
 
 

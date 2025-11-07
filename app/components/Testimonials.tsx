@@ -1,51 +1,57 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+
 export default function Testimonials() {
+  const t = useTranslations('testimonials');
+  
   const testimonials = [
     {
       rating: 5,
-      text: "The sora 2 ai platform has revolutionized our content creation process. What used to take days with traditional video production now takes minutes. The physics-accurate video quality is incredible!",
+      textKey: 'items.0.text',
       avatar: 'SC',
-      name: 'Sarah Chen',
-      role: 'Marketing Director at TechStart Inc.',
+      nameKey: 'items.0.name',
+      roleKey: 'items.0.role',
       color: 'bg-emerald-500',
     },
     {
       rating: 5,
-      text: "As a content creator, the sora 2 video generator has been a game-changer. The synchronized audio feature is so realistic, my audience can't tell the difference from real footage.",
+      textKey: 'items.1.text',
       avatar: 'MR',
-      name: 'Michael Rodriguez',
-      role: 'Content Creator at YouTube',
+      nameKey: 'items.1.name',
+      roleKey: 'items.1.role',
       color: 'bg-emerald-500',
     },
     {
       rating: 5,
-      text: "We use OpenAI's sora2 to create educational videos for our online courses. The AI understands complex topics and visualizes them perfectly with realistic motion.",
+      textKey: 'items.2.text',
       avatar: 'EW',
-      name: 'Emily Watson',
-      role: 'Education Specialist at EduTech Solutions',
+      nameKey: 'items.2.name',
+      roleKey: 'items.2.role',
       color: 'bg-emerald-500',
     },
     {
       rating: 5,
-      text: "The creative possibilities with sora 2 ai are endless. It understands artistic concepts and brings them to life with physics-accurate motion in ways I never imagined possible.",
+      textKey: 'items.3.text',
       avatar: 'DK',
-      name: 'David Kim',
-      role: 'Creative Director at Design Studio X',
+      nameKey: 'items.3.name',
+      roleKey: 'items.3.role',
       color: 'bg-emerald-500',
     },
     {
       rating: 5,
-      text: "I never thought I could afford professional video marketing. The sora 2 video generator makes it possible for small businesses like mine to compete with the big players.",
+      textKey: 'items.4.text',
       avatar: 'LT',
-      name: 'Lisa Thompson',
-      role: "Small Business Owner at Thompson's Bakery",
+      nameKey: 'items.4.name',
+      roleKey: 'items.4.role',
       color: 'bg-emerald-500',
     },
     {
       rating: 5,
-      text: "The synchronized speech and sound effects capabilities of sora2 are phenomenal. We've created music videos with realistic audio that look like they had million-dollar budgets.",
+      textKey: 'items.5.text',
       avatar: 'JP',
-      name: 'James Park',
-      role: 'Music Producer at Harmony Records',
+      nameKey: 'items.5.name',
+      roleKey: 'items.5.role',
       color: 'bg-emerald-500',
     },
   ];
@@ -55,12 +61,11 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto">
         {/* 标题 */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            Loved by Creators Worldwide
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            {t('title')}
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Join thousands of satisfied users creating amazing sora 2 video content with
-            OpenAI's advanced AI technology
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            {t('subtitle')}
           </p>
         </div>
 
@@ -69,11 +74,11 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300 relative"
+              className="bg-white border border-gray-200 rounded-lg p-8 hover:border-gray-300 transition-colors relative"
             >
               {/* 引号图标 */}
-              <div className="absolute top-6 right-6 text-gray-200">
-                <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+              <div className="absolute top-6 right-6 text-gray-100">
+                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
               </div>
@@ -94,7 +99,7 @@ export default function Testimonials() {
 
               {/* 评价文字 */}
               <p className="text-gray-700 mb-6 leading-relaxed">
-                "{testimonial.text}"
+                "{t(testimonial.textKey)}"
               </p>
 
               {/* 用户信息 */}
@@ -104,10 +109,10 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <div className="font-bold text-gray-900">
-                    {testimonial.name}
+                    {t(testimonial.nameKey)}
                   </div>
                   <div className="text-sm text-gray-600">
-                    {testimonial.role}
+                    {t(testimonial.roleKey)}
                   </div>
                 </div>
               </div>

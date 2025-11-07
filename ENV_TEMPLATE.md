@@ -56,6 +56,29 @@ BETTER_AUTH_URL=http://localhost:3000
 # LUMA_API_KEY=your-luma-api-key
 
 # ==================================
+# Dodo Payments 配置
+# ==================================
+
+# Dodo Payments API 密钥
+# 从 Dodo Payments 控制台获取
+DODO_PAYMENTS_API_KEY=your-dodo-api-key
+
+# Dodo Payments Webhook 密钥
+# 用于验证 webhook 签名
+DODO_WEBHOOK_SECRET=your-webhook-secret
+
+# Dodo Payments API 基础 URL
+# 测试环境: https://test.dodopayments.com
+# 生产环境: https://api.dodopayments.com
+DODO_BASE_URL=https://api.dodopayments.com
+
+# 是否使用测试模式
+DODO_TEST_MODE=true
+
+# 应用 URL（用于支付回调）
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+# ==================================
 # Next.js 配置
 # ==================================
 
@@ -119,6 +142,22 @@ node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
 3. 进入 API 设置
 4. 生成 API 密钥
 
+### 5. Dodo Payments 配置
+
+1. 访问 [Dodo Payments](https://dodopayments.com)
+2. 注册账户并完成认证
+3. 进入控制台 → API Keys
+4. 生成 API 密钥和 Webhook 密钥
+5. 配置 Webhook URL：
+   - 开发：`http://your-ngrok-url/api/webhooks/dodo`
+   - 生产：`https://yourdomain.com/api/webhooks/dodo`
+6. 在 Dodo 控制台创建产品和价格
+
+**重要提示**：
+- 开发环境需要使用 ngrok 或类似工具暴露本地服务器
+- Webhook 签名验证确保支付事件的安全性
+- 测试模式不会产生真实费用
+
 ---
 
 ## ⚠️ 重要提示
@@ -166,6 +205,12 @@ BETTER_AUTH_URL=https://yourdomain.com
 - [ ] `BETTER_AUTH_URL` - 应用 URL
 - [ ] `.env` 文件已添加到 `.gitignore`
 
+支付配置（推荐）：
+- [ ] `DODO_PAYMENTS_API_KEY` - Dodo Payments API 密钥
+- [ ] `DODO_WEBHOOK_SECRET` - Webhook 签名密钥
+- [ ] `DODO_BASE_URL` - API 基础 URL
+- [ ] `NEXT_PUBLIC_APP_URL` - 应用 URL
+
 可选配置：
 - [ ] `NEXT_PUBLIC_GOOGLE_LOGIN_ENABLED` - 如果启用 Google 登录
 - [ ] `GOOGLE_CLIENT_ID` - 如果启用 Google 登录
@@ -200,6 +245,11 @@ npm run dev
 ---
 
 **需要帮助？** 查看 [SUPABASE_SETUP.md](./SUPABASE_SETUP.md) 的常见问题部分。
+
+
+
+
+
 
 
 

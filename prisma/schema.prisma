@@ -21,7 +21,11 @@ model User {
   updatedAt DateTime @updatedAt
 
   // 关联关系
-  videos Video[]
+  videos        Video[]
+  payments      Payment[]
+  subscription  Subscription?
+  refunds       Refund[]
+  credit        UserCredit?
 
   @@map("users")
 }
@@ -100,4 +104,215 @@ model GuestUsage {
   @@index([fingerprint])
   @@index([ipAddress, fingerprint])
   @@map("guest_usage")
+}
+
+// 支付记录表
+model Payment {
+  id              String   @id @default(cuid())
+  userId          String?
+  user            User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  // Dodo Payments 信息
+  dodoPaymentId   String?  @unique
+  dodoCustomerId  String?
+  dodoSessionId   String?  @unique
+
+  // 支付详情
+  type            PaymentType  // 'credit_package' | 'subscription'
+  status          PaymentStatus @default(PENDING)
+  amount          Float
+  currency        String   @default("USD")
+  credits         Int?     // 购买的积分数量
+
+  // 产品信息
+  productId       String?
+  productName     String?
+  description     String?  @db.Text
+
+  // 元数据
+  metadata        Json?
+
+  // 时间戳
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  completedAt     DateTime?
+
+  @@map("payments")
+  @@index([userId])
+  @@index([status])
+  @@index([dodoPaymentId])
+  @@index([dodoCustomerId])
+  @@index([createdAt])
+}
+
+// 订阅记录表
+model Subscription {
+  id                  String   @id @default(cuid())
+  userId              String   @unique
+  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Dodo Payments 信息
+  dodoSubscriptionId  String   @unique
+  dodoCustomerId      String
+  dodoProductId       String
+
+  // 订阅详情
+  status              SubscriptionStatus @default(ACTIVE)
+  planName            String
+  planType            String   // 'basic' | 'pro' | 'enterprise'
+  monthlyCredits      Int
+
+  // 价格信息
+  amount              Float
+  currency            String   @default("USD")
+  interval            String   // 'month' | 'year'
+
+  // 周期信息
+  currentPeriodStart  DateTime
+  currentPeriodEnd    DateTime
+  cancelAtPeriodEnd   Boolean  @default(false)
+
+  // 元数据
+  metadata            Json?
+
+  // 时间戳
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+  canceledAt          DateTime?
+  endedAt             DateTime?
+
+  @@map("subscriptions")
+  @@index([userId])
+  @@index([status])
+  @@index([dodoSubscriptionId])
+  @@index([dodoCustomerId])
+}
+
+// 退款记录表
+model Refund {
+  id              String   @id @default(cuid())
+  userId          String?
+  user            User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  // Dodo Payments 信息
+  dodoRefundId    String?  @unique
+  dodoPaymentId   String?
+
+  // 退款详情
+  status          RefundStatus @default(PENDING)
+  amount          Float
+  currency        String   @default("USD")
+  reason          String?  @db.Text
+  creditsRefunded Int?
+
+  // 元数据
+  metadata        Json?
+
+  // 时间戳
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  processedAt     DateTime?
+
+  @@map("refunds")
+  @@index([userId])
+  @@index([status])
+  @@index([dodoRefundId])
+  @@index([dodoPaymentId])
+}
+
+// 用户积分表
+model UserCredit {
+  id              String   @id @default(cuid())
+  userId          String   @unique
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // 积分信息
+  balance         Int      @default(0)
+  totalEarned     Int      @default(0)
+  totalSpent      Int      @default(0)
+
+  // 时间戳
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // 交易历史
+  transactions    CreditTransaction[]
+
+  @@map("user_credits")
+  @@index([userId])
+}
+
+// 积分交易记录
+model CreditTransaction {
+  id              String   @id @default(cuid())
+  userId          String
+  userCredit      UserCredit @relation(fields: [userId], references: [userId], onDelete: Cascade)
+
+  // 交易详情
+  type            CreditTransactionType
+  amount          Int      // 正数为增加，负数为扣除
+  balanceBefore   Int
+  balanceAfter    Int
+
+  // 关联信息
+  paymentId       String?
+  videoId         String?
+  description     String?  @db.Text
+
+  // 元数据
+  metadata        Json?
+
+  // 时间戳
+  createdAt       DateTime @default(now())
+
+  @@map("credit_transactions")
+  @@index([userId])
+  @@index([type])
+  @@index([createdAt])
+}
+
+// 支付类型枚举
+enum PaymentType {
+  CREDIT_PACKAGE
+  SUBSCRIPTION
+  ONE_TIME
+}
+
+// 支付状态枚举
+enum PaymentStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+  CANCELLED
+  REFUNDED
+}
+
+// 订阅状态枚举
+enum SubscriptionStatus {
+  ACTIVE
+  PAST_DUE
+  CANCELLED
+  INCOMPLETE
+  INCOMPLETE_EXPIRED
+  TRIALING
+  UNPAID
+}
+
+// 退款状态枚举
+enum RefundStatus {
+  PENDING
+  SUCCEEDED
+  FAILED
+  CANCELLED
+}
+
+// 积分交易类型枚举
+enum CreditTransactionType {
+  PURCHASE          // 购买积分包
+  SUBSCRIPTION      // 订阅赠送
+  VIDEO_GENERATION  // 生成视频消耗
+  REFUND           // 退款返还
+  BONUS            // 奖励积分
+  ADJUSTMENT       // 管理员调整
 }

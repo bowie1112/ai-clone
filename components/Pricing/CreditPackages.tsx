@@ -1,8 +1,10 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 import { useParams } from 'next/navigation';
+import { authClient } from '@/lib/auth-client';
+import { CREDIT_PACKAGES } from '@/lib/dodo/config';
+import PurchaseButton from '@/app/components/payments/PurchaseButton';
 
 interface CreditPackagesProps {
   locale?: string;
@@ -17,36 +19,17 @@ export default function CreditPackages({ locale: propLocale }: CreditPackagesPro
   const params = useParams();
   const locale = propLocale || (params.locale as string) || 'en';
 
-  const packages = [
-    {
-      id: 'small',
-      credits: 50,
-      price: 4.99,
-      discount: 0,
-      popular: false,
-    },
-    {
-      id: 'medium',
-      credits: 100,
-      price: 8.99,
-      discount: 10,
-      popular: false,
-    },
-    {
-      id: 'large',
-      credits: 500,
-      price: 39.99,
-      discount: 20,
-      popular: true,
-    },
-    {
-      id: 'xlarge',
-      credits: 1000,
-      price: 69.99,
-      discount: 30,
-      popular: false,
-    },
-  ];
+  const { data: session } = authClient.useSession();
+  const googleEnabled = process.env.NEXT_PUBLIC_GOOGLE_LOGIN_ENABLED === '1';
+
+  const packages = CREDIT_PACKAGES.map((p) => ({
+    id: p.id,
+    credits: p.credits,
+    price: p.price,
+    discount: 'discount' in p ? p.discount! : 0,
+    popular: p.popular ?? false,
+    name: p.name,
+  }));
 
   return (
     <div className="mb-24 px-4">
@@ -118,16 +101,32 @@ export default function CreditPackages({ locale: propLocale }: CreditPackagesPro
             </div>
 
             {/* 购买按钮 */}
-            <Link
-              href={`/${locale}/checkout?type=credits&package=${pkg.id}`}
-              className={`block w-full py-2.5 px-4 rounded-lg text-center text-sm font-medium transition-all ${
-                pkg.popular
-                  ? 'bg-gray-900 text-white hover:bg-gray-800'
-                  : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-              }`}
-            >
-              {t('buyNow')}
-            </Link>
+            {session?.user?.id ? (
+              <PurchaseButton
+                userId={session.user.id}
+                productId={pkg.id}
+                productName={pkg.name}
+                price={pkg.price}
+                credits={pkg.credits}
+                variant={pkg.popular ? 'primary' : 'secondary'}
+                className="w-full !py-2.5 !px-4 !text-sm"
+              />
+            ) : (
+              <button
+                onClick={async () => {
+                  if (googleEnabled) {
+                    await authClient.signIn.social({ provider: 'google', callbackURL: `/${locale}/pricing` });
+                  }
+                }}
+                className={`block w-full py-2.5 px-4 rounded-lg text-center text-sm font-medium transition-all ${
+                  pkg.popular
+                    ? 'bg-gray-900 text-white hover:bg-gray-800'
+                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                }`}
+              >
+                {t('buyNow')}
+              </button>
+            )}
 
             {/* 额外信息 */}
             <p className="text-xs text-center text-gray-500 mt-4">

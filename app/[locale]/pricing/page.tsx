@@ -14,8 +14,9 @@ interface PricingPageProps {
  * Generate metadata for Pricing page
  */
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: PricingPageProps): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pricing' });
 
   return {
@@ -39,7 +40,8 @@ export async function generateMetadata({
  * Pricing Page
  * 定价页面 - 展示所有订阅套餐和积分包
  */
-export default function PricingPage({ params: { locale } }: PricingPageProps) {
+export default async function PricingPage({ params }: PricingPageProps) {
+  const { locale } = await params;
   // Enable static rendering
   setRequestLocale(locale);
 

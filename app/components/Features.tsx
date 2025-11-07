@@ -1,4 +1,10 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+
 export default function Features() {
+  const t = useTranslations('features');
+  
   const features = [
     {
       icon: (
@@ -11,8 +17,8 @@ export default function Features() {
           />
         </svg>
       ),
-      title: 'Lightning Fast',
-      description: '30-60 sec generation',
+      titleKey: 'fast.title',
+      descKey: 'fast.description',
     },
     {
       icon: (
@@ -25,8 +31,8 @@ export default function Features() {
           />
         </svg>
       ),
-      title: '100% Free',
-      description: 'No hidden costs',
+      titleKey: 'free.title',
+      descKey: 'free.description',
     },
     {
       icon: (
@@ -39,30 +45,30 @@ export default function Features() {
           />
         </svg>
       ),
-      title: 'AI Powered',
-      description: "OpenAI's Sora 2 model",
+      titleKey: 'ai.title',
+      descKey: 'ai.description',
     },
   ];
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 border-y border-gray-200">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="text-center"
+              className="bg-white border border-gray-200 rounded-xl p-8 hover:border-gray-300 transition-colors"
             >
               <div className="flex justify-center mb-4">
                 <div className="text-gray-900">
                   {feature.icon}
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
-                {feature.title}
+              <h3 className="text-lg font-semibold text-gray-900 mb-2 text-center">
+                {t(feature.titleKey)}
               </h3>
-              <p className="text-gray-600">
-                {feature.description}
+              <p className="text-sm text-gray-600 text-center">
+                {t(feature.descKey)}
               </p>
             </div>
           ))}
